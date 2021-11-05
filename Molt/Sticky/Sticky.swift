@@ -30,36 +30,3 @@ struct Sticky: Shape {
         return path
     }
 }
-
-struct StickyView: View {
-    @State private var curveFactor: CGFloat = -0.2
-    
-    let yellow = Color(red: 251/255, green: 236/255, blue: 93/255)
-    let shadedYellow = Color(red: 239/255, green: 215/255, blue: 6/255)
-    
-    var body: some View {
-        VStack {
-            Spacer()
-            
-            Sticky(curveFactor: curveFactor)
-                .stroke(Color.gray.opacity(0.3))
-                .background(
-                    Sticky(curveFactor: curveFactor)
-                        .fill(LinearGradient(stops: [.init(color: shadedYellow, location: curveFactor), .init(color: yellow, location: 1)], startPoint: .bottom, endPoint: .top))
-//                        .foregroundColor(.yellow)
-                )
-                .frame(width: 200, height: 200)
-
-            Spacer()
-            
-            Slider(value: $curveFactor, in: -1...1)
-                .padding()
-        }
-    }
-}
-
-struct StickyView_Previews: PreviewProvider {
-    static var previews: some View {
-        StickyView()
-    }
-}
