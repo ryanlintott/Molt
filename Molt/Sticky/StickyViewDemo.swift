@@ -14,7 +14,7 @@ struct StickyViewDemo: View {
         VStack {
             Spacer()
             
-            StickyView(curveFactor: $curveFactor)
+            StickyView(color: .yellow, curveFactor: $curveFactor)
                 .frame(width: 200, height: 200)
 
             Spacer()
