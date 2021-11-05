@@ -16,14 +16,14 @@ struct SessionParamView: View {
            NavigationView {
                VStack {
                    Text("How distracted are you?")
-                   //stack animation
+                   //slider animation
+                   SliderAnimation()
                    Spacer()
-                   VStack(spacing:0) {
-                       Text("Time")
+                   HStack(spacing:0) {
+                       Text("**Time:**")
                        TimePicker(selectedHour: $hours, selectedMinute: $minutes)
-                   }
+                   }.padding(.horizontal)
                }
-               .navigationBarTitle("New Session")
            }
        }
 }

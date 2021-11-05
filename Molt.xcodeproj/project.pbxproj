@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		91CBF0C62735857700C4E8BC /* StartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0C52735857700C4E8BC /* StartPage.swift */; };
 		91CBF0C8273585B500C4E8BC /* SessionParamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0C7273585B500C4E8BC /* SessionParamView.swift */; };
+		91CBF0CD2735999500C4E8BC /* SliderAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0CC2735999500C4E8BC /* SliderAnimation.swift */; };
 		CF8B11AC2735826B00579F46 /* MoltApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11AB2735826B00579F46 /* MoltApp.swift */; };
 		CF8B11AE2735826B00579F46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11AD2735826B00579F46 /* ContentView.swift */; };
 		CF8B11B02735826D00579F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8B11AF2735826D00579F46 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		91CBF0C52735857700C4E8BC /* StartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage.swift; sourceTree = "<group>"; };
 		91CBF0C7273585B500C4E8BC /* SessionParamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionParamView.swift; sourceTree = "<group>"; };
+		91CBF0CC2735999500C4E8BC /* SliderAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderAnimation.swift; sourceTree = "<group>"; };
 		CF8B11A82735826B00579F46 /* Molt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Molt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8B11AB2735826B00579F46 /* MoltApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoltApp.swift; sourceTree = "<group>"; };
 		CF8B11AD2735826B00579F46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		91CBF0C32735850D00C4E8BC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				91CBF0CE2735A66D00C4E8BC /* Animation */,
 				91CBF0C52735857700C4E8BC /* StartPage.swift */,
 				91CBF0C7273585B500C4E8BC /* SessionParamView.swift */,
 			);
@@ -97,6 +100,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		91CBF0CE2735A66D00C4E8BC /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				91CBF0CC2735999500C4E8BC /* SliderAnimation.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		CF8B119F2735826B00579F46 = {
@@ -301,6 +312,7 @@
 			files = (
 				CF8B11AE2735826B00579F46 /* ContentView.swift in Sources */,
 				CF8B11DA2735A2C200579F46 /* StickyView.swift in Sources */,
+				91CBF0CD2735999500C4E8BC /* SliderAnimation.swift in Sources */,
 				91CBF0C8273585B500C4E8BC /* SessionParamView.swift in Sources */,
 				91CBF0C62735857700C4E8BC /* StartPage.swift in Sources */,
 				CF8B11AC2735826B00579F46 /* MoltApp.swift in Sources */,
