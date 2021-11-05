@@ -33,7 +33,7 @@ struct StickyView: View {
 
 struct StickyView_Previews: PreviewProvider {
     static var previews: some View {
-        StickyView(color: .yellow, curveFactor: .constant(0.2))
+        StickyView(color: .stickyYellow, curveFactor: .constant(0.2))
                 .frame(width: 200, height: 200)
     }
 }
