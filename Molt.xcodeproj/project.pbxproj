@@ -14,6 +14,7 @@
 		CF8B11BD2735826D00579F46 /* MoltTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11BC2735826D00579F46 /* MoltTests.swift */; };
 		CF8B11C72735826D00579F46 /* MoltUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11C62735826D00579F46 /* MoltUITests.swift */; };
 		CF8B11C92735826D00579F46 /* MoltUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11C82735826D00579F46 /* MoltUITestsLaunchTests.swift */; };
+		CF8B11D62735855400579F46 /* MoltSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11D52735855400579F46 /* MoltSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		CF8B11C22735826D00579F46 /* MoltUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoltUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8B11C62735826D00579F46 /* MoltUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoltUITests.swift; sourceTree = "<group>"; };
 		CF8B11C82735826D00579F46 /* MoltUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoltUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CF8B11D52735855400579F46 /* MoltSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoltSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				CF8B11AB2735826B00579F46 /* MoltApp.swift */,
+				CF8B11D52735855400579F46 /* MoltSession.swift */,
 				CF8B11AD2735826B00579F46 /* ContentView.swift */,
 				CF8B11AF2735826D00579F46 /* Assets.xcassets */,
 				CF8B11B12735826D00579F46 /* Preview Content */,
@@ -259,6 +262,7 @@
 			files = (
 				CF8B11AE2735826B00579F46 /* ContentView.swift in Sources */,
 				CF8B11AC2735826B00579F46 /* MoltApp.swift in Sources */,
+				CF8B11D62735855400579F46 /* MoltSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
