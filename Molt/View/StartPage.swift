@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StartPage: View {
     @State var showSessionStart = false
+    @State var bottomSheetShown = false
     var body: some View {
         NavigationView {
             
@@ -16,26 +17,28 @@ struct StartPage: View {
                 Image("banner")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 500, height: 180, alignment: .center)
+                    .frame(width: 500, height: 180)
                 Spacer()
-                
                 //change destination when DashboardView is completed
                 Button("Begin",action: {
                     self.showSessionStart = true
                 }).buttonStyle(DashedButtonStyle())
-                Spacer()
+                    .padding()
                 
-                ZStack {
-                    CardView()
-                        .edgesIgnoringSafeArea(.bottom)
-                        .frame(maxHeight:150)
-                    NavigationLink(destination: SessionParamView()) {
-                        Text("**Sessions**")
-                            .foregroundColor(.white)
+                BottomSheetView(
+                    isOpen: self.$bottomSheetShown,
+                    maxHeight: UIScreen.main.bounds.height * 0.7
+                ) {
+                    ZStack {
+                        Color.black
+                        VStack {
+                            Text("**Sessions**")
+                                .foregroundColor(.white)
                             .font(.largeTitle)
+                            Spacer()
+                        }
                     }
-
-                }
+                }.edgesIgnoringSafeArea(.all)
             }
         }.fullScreenCover(isPresented:self.$showSessionStart){
             SessionParamView()
