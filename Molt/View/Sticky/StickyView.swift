@@ -26,7 +26,7 @@ struct StickyView: View {
                 .blendMode(.screen)
             
             Sticky(curveFactor: curveFactor)
-                .stroke(Color.gray.opacity(0.3))
+                .stroke(Color.gray.opacity(0.1))
         }
     }
 }
