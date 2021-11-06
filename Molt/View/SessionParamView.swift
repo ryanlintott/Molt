@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct SessionParamView: View {
-    @State private var hours = Calendar.current.component(.hour, from: Date())
-       @State private var minutes = Calendar.current.component(.minute, from: Date())
-
+    @State var hours = Calendar.current.component(.hour, from: Date())
+       @State var minutes = Calendar.current.component(.minute, from: Date())
+    
        var body: some View {
            
            NavigationView {
                VStack {
-                   Text("How distracted are you?")
+                   NavigationLink(destination: SessionStartView(hours: self.$hours, minutes: self.$minutes))
+                   {
+                       Text("How distracted are you?")
+                       
+                   }
                    //slider animation
                    SliderAnimation()
                    Spacer()
