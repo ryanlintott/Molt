@@ -74,9 +74,17 @@ struct BottomSheetView<Content: View>: View {
 }
 
 struct BottomSheetView_Previews: PreviewProvider {
+    struct PreviewData: View {
+        @State private var isOpen = false
+        
+        var body: some View {
+            BottomSheetView(isOpen: $isOpen, maxHeight: 500) {
+                Color.red
+            }.edgesIgnoringSafeArea(.all)
+        }
+    }
+    
     static var previews: some View {
-        BottomSheetView(isOpen: .constant(false), maxHeight: 600) {
-            Rectangle().fill(Color.red)
-        }.edgesIgnoringSafeArea(.all)
+        PreviewData()
     }
 }
