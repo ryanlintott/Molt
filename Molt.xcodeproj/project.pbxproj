@@ -30,6 +30,7 @@
 		CF8B11DF2735F21F00579F46 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8B11DE2735F21F00579F46 /* Colors.xcassets */; };
 		CF8B11E12735F2B200579F46 /* Color+sticky.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11E02735F2B200579F46 /* Color+sticky.swift */; };
 		CFA1CA072736FF970025EAEF /* WallSticky.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1CA062736FF970025EAEF /* WallSticky.swift */; };
+		CFA1CA0927371E790025EAEF /* InteractiveStickyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1CA0827371E790025EAEF /* InteractiveStickyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		CF8B11DE2735F21F00579F46 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CF8B11E02735F2B200579F46 /* Color+sticky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+sticky.swift"; sourceTree = "<group>"; };
 		CFA1CA062736FF970025EAEF /* WallSticky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallSticky.swift; sourceTree = "<group>"; };
+		CFA1CA0827371E790025EAEF /* InteractiveStickyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveStickyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 				CFA1CA062736FF970025EAEF /* WallSticky.swift */,
 				CF8B11D72735889000579F46 /* Sticky.swift */,
 				CF8B11D92735A2C200579F46 /* StickyView.swift */,
+				CFA1CA0827371E790025EAEF /* InteractiveStickyView.swift */,
 				CF8B11DB2735A2D000579F46 /* StickyViewDemo.swift */,
 			);
 			path = Sticky;
@@ -358,6 +361,7 @@
 				CF8B11E12735F2B200579F46 /* Color+sticky.swift in Sources */,
 				CF0814BA2736B11B00D7E562 /* DashedButtonStyle.swift in Sources */,
 				CF8B11AC2735826B00579F46 /* MoltApp.swift in Sources */,
+				CFA1CA0927371E790025EAEF /* InteractiveStickyView.swift in Sources */,
 				CF8B11D82735889000579F46 /* Sticky.swift in Sources */,
 				CF8B11DC2735A2D000579F46 /* StickyViewDemo.swift in Sources */,
 				91CBF0D22735B44D00C4E8BC /* ParallaxDemo.swift in Sources */,
