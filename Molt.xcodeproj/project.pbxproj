@@ -13,6 +13,8 @@
 		91CBF0D02735B3FC00C4E8BC /* ParallaxEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0CF2735B3FC00C4E8BC /* ParallaxEffect.swift */; };
 		91CBF0D22735B44D00C4E8BC /* ParallaxDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0D12735B44D00C4E8BC /* ParallaxDemo.swift */; };
 		91CBF0D42736564B00C4E8BC /* DashedBorderEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0D32736564B00C4E8BC /* DashedBorderEffect.swift */; };
+		CF0814B82736B09B00D7E562 /* StrokeStyle+dashed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0814B72736B09B00D7E562 /* StrokeStyle+dashed.swift */; };
+		CF0814BA2736B11B00D7E562 /* DashedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0814B92736B11B00D7E562 /* DashedButtonStyle.swift */; };
 		CF8B11AC2735826B00579F46 /* MoltApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11AB2735826B00579F46 /* MoltApp.swift */; };
 		CF8B11AE2735826B00579F46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11AD2735826B00579F46 /* ContentView.swift */; };
 		CF8B11B02735826D00579F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8B11AF2735826D00579F46 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		91CBF0CF2735B3FC00C4E8BC /* ParallaxEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxEffect.swift; sourceTree = "<group>"; };
 		91CBF0D12735B44D00C4E8BC /* ParallaxDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxDemo.swift; sourceTree = "<group>"; };
 		91CBF0D32736564B00C4E8BC /* DashedBorderEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedBorderEffect.swift; sourceTree = "<group>"; };
+		CF0814B72736B09B00D7E562 /* StrokeStyle+dashed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StrokeStyle+dashed.swift"; sourceTree = "<group>"; };
+		CF0814B92736B11B00D7E562 /* DashedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedButtonStyle.swift; sourceTree = "<group>"; };
 		CF8B11A82735826B00579F46 /* Molt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Molt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8B11AB2735826B00579F46 /* MoltApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoltApp.swift; sourceTree = "<group>"; };
 		CF8B11AD2735826B00579F46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				CF8B11E02735F2B200579F46 /* Color+sticky.swift */,
+				CF0814B72736B09B00D7E562 /* StrokeStyle+dashed.swift */,
+				CF0814B92736B11B00D7E562 /* DashedButtonStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -340,7 +346,9 @@
 				91CBF0C8273585B500C4E8BC /* SessionParamView.swift in Sources */,
 				91CBF0C62735857700C4E8BC /* StartPage.swift in Sources */,
 				91CBF0D02735B3FC00C4E8BC /* ParallaxEffect.swift in Sources */,
+				CF0814B82736B09B00D7E562 /* StrokeStyle+dashed.swift in Sources */,
 				CF8B11E12735F2B200579F46 /* Color+sticky.swift in Sources */,
+				CF0814BA2736B11B00D7E562 /* DashedButtonStyle.swift in Sources */,
 				CF8B11AC2735826B00579F46 /* MoltApp.swift in Sources */,
 				CF8B11D82735889000579F46 /* Sticky.swift in Sources */,
 				CF8B11DC2735A2D000579F46 /* StickyViewDemo.swift in Sources */,
