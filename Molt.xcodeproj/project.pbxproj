@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		911B09562738270700C78C75 /* StickyStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B09552738270700C78C75 /* StickyStack.swift */; };
+		911B09582738274E00C78C75 /* StackableSticky.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B09572738274E00C78C75 /* StackableSticky.swift */; };
 		91CBF0C62735857700C4E8BC /* StartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0C52735857700C4E8BC /* StartPage.swift */; };
 		91CBF0CD2735999500C4E8BC /* SessionParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0CC2735999500C4E8BC /* SessionParameterView.swift */; };
 		91CBF0D02735B3FC00C4E8BC /* ParallaxEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0CF2735B3FC00C4E8BC /* ParallaxEffect.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		911B09552738270700C78C75 /* StickyStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyStack.swift; sourceTree = "<group>"; };
+		911B09572738274E00C78C75 /* StackableSticky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackableSticky.swift; sourceTree = "<group>"; };
 		91CBF0C52735857700C4E8BC /* StartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage.swift; sourceTree = "<group>"; };
 		91CBF0CC2735999500C4E8BC /* SessionParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionParameterView.swift; sourceTree = "<group>"; };
 		91CBF0CF2735B3FC00C4E8BC /* ParallaxEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxEffect.swift; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 				CF8B11D92735A2C200579F46 /* StickyView.swift */,
 				CFA1CA0827371E790025EAEF /* InteractiveStickyView.swift */,
 				CF8B11DB2735A2D000579F46 /* StickyViewDemo.swift */,
+				911B09552738270700C78C75 /* StickyStack.swift */,
+				911B09572738274E00C78C75 /* StackableSticky.swift */,
 			);
 			path = Sticky;
 			sourceTree = "<group>";
@@ -357,8 +363,10 @@
 				CF8B11E12735F2B200579F46 /* Color+sticky.swift in Sources */,
 				CF0814BA2736B11B00D7E562 /* DashedButtonStyle.swift in Sources */,
 				CF8B11AC2735826B00579F46 /* MoltApp.swift in Sources */,
+				911B09562738270700C78C75 /* StickyStack.swift in Sources */,
 				CFA1CA0927371E790025EAEF /* InteractiveStickyView.swift in Sources */,
 				CF8B11D82735889000579F46 /* Sticky.swift in Sources */,
+				911B09582738274E00C78C75 /* StackableSticky.swift in Sources */,
 				CF8B11DC2735A2D000579F46 /* StickyViewDemo.swift in Sources */,
 				91CBF0D22735B44D00C4E8BC /* ParallaxDemo.swift in Sources */,
 				91CBF0D42736564B00C4E8BC /* DashedBorderEffect.swift in Sources */,
