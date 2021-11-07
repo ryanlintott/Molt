@@ -95,7 +95,7 @@ struct SessionParameterView: View {
                     .padding()
                 
             }.sheet(isPresented:self.$startSession){
-                SessionTimerView(time: self.$time)
+                SessionTimerView(totalTime: time)
             }
             
         }

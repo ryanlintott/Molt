@@ -38,6 +38,8 @@
 		CFA9CAD427382AD10006C424 /* MoltSessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CAD327382AD10006C424 /* MoltSessionData.swift */; };
 		CFA9CB1327382EC40006C424 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CB1227382EC40006C424 /* Persistence.swift */; };
 		CFA9CB1527382EF60006C424 /* MoltSession+example.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CB1427382EF60006C424 /* MoltSession+example.swift */; };
+		CFA9CB1E273844C60006C424 /* GlassViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CB1C273844C60006C424 /* GlassViewModifier.swift */; };
+		CFA9CB1F273844C60006C424 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CB1D273844C60006C424 /* HapticManager.swift */; };
 		D59178922737CCD200F9C11A /* RandomImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59178912737CCD200F9C11A /* RandomImageGenerator.swift */; };
 		D59178942737D96200F9C11A /* StickyViewWithData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59178932737D96200F9C11A /* StickyViewWithData.swift */; };
 		D5B565DE2735C5EF0044F6BF /* DashboardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B565DD2735C5EF0044F6BF /* DashboardListView.swift */; };
@@ -95,6 +97,8 @@
 		CFA9CAD327382AD10006C424 /* MoltSessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoltSessionData.swift; sourceTree = "<group>"; };
 		CFA9CB1227382EC40006C424 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		CFA9CB1427382EF60006C424 /* MoltSession+example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoltSession+example.swift"; sourceTree = "<group>"; };
+		CFA9CB1C273844C60006C424 /* GlassViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassViewModifier.swift; sourceTree = "<group>"; };
+		CFA9CB1D273844C60006C424 /* HapticManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		D59178912737CCD200F9C11A /* RandomImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageGenerator.swift; sourceTree = "<group>"; };
 		D59178932737D96200F9C11A /* StickyViewWithData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyViewWithData.swift; sourceTree = "<group>"; };
 		D5B565DD2735C5EF0044F6BF /* DashboardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardListView.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 				91CBF0CC2735999500C4E8BC /* SessionParameterView.swift */,
 				CF0814BB2736B6D500D7E562 /* StickyWall.swift */,
 				911B095927382FDF00C78C75 /* SessionTimerView.swift */,
+				CFA9CB1C273844C60006C424 /* GlassViewModifier.swift */,
+				CFA9CB1D273844C60006C424 /* HapticManager.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -397,6 +403,7 @@
 			files = (
 				CF8B11AE2735826B00579F46 /* ContentView.swift in Sources */,
 				911B095A27382FDF00C78C75 /* SessionTimerView.swift in Sources */,
+				CFA9CB1F273844C60006C424 /* HapticManager.swift in Sources */,
 				CFA9CACE273816ED0006C424 /* Diamond.swift in Sources */,
 				CF8B11DA2735A2C200579F46 /* StickyView.swift in Sources */,
 				CF0814BC2736B6D500D7E562 /* StickyWall.swift in Sources */,
@@ -421,6 +428,7 @@
 				CF8B11D82735889000579F46 /* Sticky.swift in Sources */,
 				CF8B11DC2735A2D000579F46 /* StickyViewDemo.swift in Sources */,
 				D5B565DE2735C5EF0044F6BF /* DashboardListView.swift in Sources */,
+				CFA9CB1E273844C60006C424 /* GlassViewModifier.swift in Sources */,
 				91CBF0D22735B44D00C4E8BC /* ParallaxDemo.swift in Sources */,
 				91CBF0D42736564B00C4E8BC /* DashedBorderEffect.swift in Sources */,
 				CFA9CAD427382AD10006C424 /* MoltSessionData.swift in Sources */,

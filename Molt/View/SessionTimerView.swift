@@ -8,65 +8,85 @@
 import SwiftUI
 
 struct SessionTimerView: View {
-
-   
-    @Binding var time:Int
+    
+    let totalTime: Int
+    @State private var time: Int? = nil
     
     @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
+    //@State private var feedback = UINotificationFeedbackGenerator()
+    
+    @State private var hapticManager: HapticManager?
+    
     var body: some View {
-       ZStack {
-           Image("foliage-bkgr")
-               .resizable()
-               .edgesIgnoringSafeArea(.all)
-           
-        VStack {
-            Spacer()
-            if time > 0 {
-                Text("\(timeString(time: time))")
-                    .font(.system(size: 72, weight: .black))
-                    .monospacedDigit()
-                    .foregroundStyle(.ultraThinMaterial)
-
-            } else if time == 0 {
-                Text("Completed!")
-                    .font(.largeTitle)
-                    .padding()
-                    .foregroundColor(.green)
-                    .opacity(0.8)
-                    .background(.ultraThinMaterial)
-                    .cornerRadius(12)
-                    .padding(12)
+        ZStack {
+            Image("foliage-bkgr")
+                .resizable()
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Spacer()
+                if let time = time {
+                    if time > 0 {
+                        Text("\(timeString(time: time))")
+                            .font(.system(size: 72, weight: .black))
+                            .monospacedDigit()
+                            .foregroundStyle(.ultraThinMaterial)
+                        
+                    } else if time == 0 {
+                        Text("Completed!")
+                            .font(.largeTitle)
+                            .padding()
+                            .foregroundColor(.green)
+                            .opacity(0.8)
+                            .background(.ultraThinMaterial)
+                            .cornerRadius(12)
+                            .padding(12)
+                    }
+                }
+                
+                HStack(spacing: 28) {
+                    
+                    Button("Stop") {
+                        stopTimer()
+                    }
+                    
+                    Button("Resume") {
+                        startTimer()
+                    }
+                    
+                    Button ("Restart") {
+                        resetTimer()
+                    }
+                }
+                .glaced()
+                .background(.ultraThinMaterial)
+                .cornerRadius(12)
+                .padding(12)
+                
             }
             
-         HStack(spacing: 36) {
-            
-            Button("Stop") {
-                stopTimer()
+            .onReceive(timer) { _ in
+                hapticManager = HapticManager()
+                if let time = time {
+                    if time > 0 {
+                        self.time = time - 1
+                        
+                        if time == 2 {
+                            self.hapticManager?.prepare()
+                        }
+                        
+                        if time == 0 {
+                            self.hapticManager?.customHapticPattern()
+                            print("Playing haptics")
+                        }
+                    }
+                }
             }
-            
-            Button("Resume") {
-                time = self.time
-                startTimer()
+            .onAppear {
+                time = totalTime
             }
-            
-            Button ("Restart") {
-                resetTimer()
-            }
-          }
-        .glaced()
-        .background(.ultraThinMaterial)
-        .cornerRadius(12)
-        .padding(12)
-        
         }
-        
-        .onReceive(timer) { time in
-            if self.time > 0 {
-                self.time -= 1
-            }
-        }
-      }
         
     }
     
@@ -79,7 +99,7 @@ struct SessionTimerView: View {
     }
     
     func resetTimer() {
-        time = 0
+        time = totalTime
         timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     }
     
@@ -90,27 +110,8 @@ struct SessionTimerView: View {
     }
 }
 
-
-
-//struct SessionTimerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SessionTimerView()
-//    }
-//}
-struct GlassViewModifier: ViewModifier {
-    
-    func body(content: Content) -> some View {
-            content
-                .font(.title)
-                .foregroundStyle(.thinMaterial)
-                .padding()
-                
-        
-    }
-}
-
-extension View {
-    func glaced() -> some View {
-        modifier(GlassViewModifier())
+struct SessionTimerView_Previews: PreviewProvider {
+    static var previews: some View {
+        SessionTimerView(totalTime: 90)
     }
 }
