@@ -9,8 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        GeometryReader { proxy in
+            StickyWall(stickies: .rainbow(count: 25), frame: proxy.size)
+        }
     }
 }
 
