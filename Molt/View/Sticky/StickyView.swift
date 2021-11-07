@@ -27,10 +27,11 @@ struct StickyView: View {
             
             Sticky(curveFactor: curveFactor)
                 .stroke(Color.gray.opacity(0.1))
+            
             if let image = imageName {
-            Image(image)
-                .resizable()
-                .scaledToFit()
+                Image(image)
+                    .resizable()
+                    .scaledToFit()
             }
         }
     }

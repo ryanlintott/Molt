@@ -5,8 +5,9 @@
         <attribute name="goalLength" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="journal" optional="YES" attributeType="String"/>
         <attribute name="length" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="noteColor" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="MoltSessionData" positionX="-63" positionY="-18" width="128" height="89"/>
+        <element name="MoltSessionData" positionX="-63" positionY="-18" width="128" height="104"/>
     </elements>
 </model>
