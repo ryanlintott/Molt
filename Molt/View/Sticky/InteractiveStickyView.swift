@@ -19,7 +19,7 @@ struct InteractiveStickyView: View {
     let size: CGFloat
     let dropHeight: CGFloat
     let curvePhase: CGFloat
-    
+    let imageName: String
     var curveFactor: CGFloat {
         if finalOffset == nil {
             return min(max(0, 0.1 + (predictedDragOffset.height - dragOffset.height) / 300), 0.4)
@@ -43,10 +43,10 @@ struct InteractiveStickyView: View {
     }
     
     var body: some View {
-        StickyView(color: color, curveFactor: curveFactor)
+        StickyView(color: color, curveFactor: curveFactor, imageName: imageName)
             .background(
                 Color.black.opacity(0.2)
-                    .mask(StickyView(color: color, curveFactor: curveFactor))
+                    .mask(StickyView(color: color, curveFactor: curveFactor, imageName: nil))
                     .blur(radius: isHovering ? 6 : 2)
                     .padding(.top, 2)
                     .padding(.bottom, -2)
@@ -82,6 +82,6 @@ struct InteractiveStickyView: View {
 
 struct InteractiveStickyView_Previews: PreviewProvider {
     static var previews: some View {
-        InteractiveStickyView(color: .stickyYellow, size: 100, dropHeight: 1000, curvePhase: 0)
+        InteractiveStickyView(color: .stickyYellow, size: 100, dropHeight: 1000, curvePhase: 0, imageName: "scribble1")
     }
 }

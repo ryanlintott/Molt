@@ -44,7 +44,7 @@ struct StickyViewWithData: View {
         }
         .padding()
         .background(
-            StickyView(color: color, curveFactor: curveFactor)
+            StickyView(color: color, curveFactor: curveFactor, imageName: nil)
         )
         .aspectRatio(1, contentMode: .fit)
     }
