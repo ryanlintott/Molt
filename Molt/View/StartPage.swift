@@ -11,12 +11,12 @@ struct StartPage: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: SessionParamView()) {
+                NavigationLink(destination: SessionParameterView()) {
                     Text("Start a Session")
                 }
                     .padding()
                 //change destination when DashboardView is completed
-                NavigationLink(destination: SessionParamView()) {
+                NavigationLink(destination: SessionParameterView()) {
                     ZStack {
                         Text("**Summary**")
                             .foregroundColor(.black)
