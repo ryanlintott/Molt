@@ -10,6 +10,8 @@
 		911B09562738270700C78C75 /* StickyStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B09552738270700C78C75 /* StickyStack.swift */; };
 		911B095A27382FDF00C78C75 /* SessionTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B095927382FDF00C78C75 /* SessionTimerView.swift */; };
 		911B095C2738458400C78C75 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B095B2738458400C78C75 /* BottomSheetView.swift */; };
+		911B095E2738502100C78C75 /* JournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B095D2738502100C78C75 /* JournalEntryView.swift */; };
+		911B0960273853F700C78C75 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B095F273853F700C78C75 /* ColorPickerView.swift */; };
 		91CBF0C62735857700C4E8BC /* StartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0C52735857700C4E8BC /* StartPage.swift */; };
 		91CBF0CD2735999500C4E8BC /* SessionParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0CC2735999500C4E8BC /* SessionParameterView.swift */; };
 		91CBF0D02735B3FC00C4E8BC /* ParallaxEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0CF2735B3FC00C4E8BC /* ParallaxEffect.swift */; };
@@ -70,6 +72,8 @@
 		911B09552738270700C78C75 /* StickyStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyStack.swift; sourceTree = "<group>"; };
 		911B095927382FDF00C78C75 /* SessionTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTimerView.swift; sourceTree = "<group>"; };
 		911B095B2738458400C78C75 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		911B095D2738502100C78C75 /* JournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryView.swift; sourceTree = "<group>"; };
+		911B095F273853F700C78C75 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		91CBF0C52735857700C4E8BC /* StartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage.swift; sourceTree = "<group>"; };
 		91CBF0CC2735999500C4E8BC /* SessionParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionParameterView.swift; sourceTree = "<group>"; };
 		91CBF0CF2735B3FC00C4E8BC /* ParallaxEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxEffect.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				911B095927382FDF00C78C75 /* SessionTimerView.swift */,
 				CFA9CB1C273844C60006C424 /* GlassViewModifier.swift */,
 				CFA9CB1D273844C60006C424 /* HapticManager.swift */,
+				911B095D2738502100C78C75 /* JournalEntryView.swift */,
+				911B095F273853F700C78C75 /* ColorPickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -441,11 +447,13 @@
 				CFA1CA0927371E790025EAEF /* InteractiveStickyView.swift in Sources */,
 				D59178942737D96200F9C11A /* StickyViewWithData.swift in Sources */,
 				CF8B11D82735889000579F46 /* Sticky.swift in Sources */,
+				911B095E2738502100C78C75 /* JournalEntryView.swift in Sources */,
 				CF8B11DC2735A2D000579F46 /* StickyViewDemo.swift in Sources */,
 				D5B565DE2735C5EF0044F6BF /* DashboardListView.swift in Sources */,
 				CFA9CB252738696B0006C424 /* StickyStackSlider.swift in Sources */,
 				CFA9CB1E273844C60006C424 /* GlassViewModifier.swift in Sources */,
 				91CBF0D22735B44D00C4E8BC /* ParallaxDemo.swift in Sources */,
+				911B0960273853F700C78C75 /* ColorPickerView.swift in Sources */,
 				91CBF0D42736564B00C4E8BC /* DashedBorderEffect.swift in Sources */,
 				CFA9CAD427382AD10006C424 /* MoltSessionData.swift in Sources */,
 				CF8B11D62735855400579F46 /* MoltSession.swift in Sources */,

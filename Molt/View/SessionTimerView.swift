@@ -15,12 +15,11 @@ struct SessionTimerView: View {
     @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     //@State private var feedback = UINotificationFeedbackGenerator()
-    
+    let backgroundImage: String
     @State private var hapticManager: HapticManager?
-    
     var body: some View {
         ZStack {
-            Image("foliage-bkgr")
+            Image(backgroundImage)
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
             
@@ -50,17 +49,14 @@ struct SessionTimerView: View {
                     Button("Stop") {
                         stopTimer()
                     }
-                    
+                    .foregroundColor(Color.gray)
                     Button("Resume") {
                         startTimer()
                     }
-                    
-                    Button ("Restart") {
-                        resetTimer()
-                    }
+                    .foregroundColor(Color.gray)
                 }
                 .glaced()
-                .background(.ultraThinMaterial)
+                .background(.ultraThickMaterial)
                 .cornerRadius(12)
                 .padding(12)
                 
@@ -98,11 +94,6 @@ struct SessionTimerView: View {
         timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     }
     
-    func resetTimer() {
-        time = totalTime
-        timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    }
-    
     func timeString(time: Int) -> String {
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
@@ -112,6 +103,6 @@ struct SessionTimerView: View {
 
 struct SessionTimerView_Previews: PreviewProvider {
     static var previews: some View {
-        SessionTimerView(totalTime: 90)
+        SessionTimerView(totalTime: 90, backgroundImage: "bg1")
     }
 }

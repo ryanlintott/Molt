@@ -18,6 +18,8 @@ struct SessionParameterView: View {
     let minStress = 1
     let maxStress = 50
     
+    let images = ["bg1","bg2","bg3","bg4","bg5","bg6","bg7","bg8","bg9","bg10","bg11","bg12","bg13","bg14"]
+    
     var body: some View {
         VStack {
             HStack(spacing:20) {
@@ -63,8 +65,6 @@ struct SessionParameterView: View {
         }
     }
 }
-
-struct SessionParamView_Previews: PreviewProvider {
     struct PreviewData: View {
         @State private var goalLength = 60
         @State private var stressLevel = 10
@@ -76,6 +76,8 @@ struct SessionParamView_Previews: PreviewProvider {
         }
     }
     
+    }
+        PreviewData()
     static var previews: some View {
         PreviewData()
     }

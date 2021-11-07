@@ -13,8 +13,8 @@ public struct MoltSession: Identifiable {
     let stressLevel: Int
     let goalLength: Int
     let length: Int
-    let noteColor: StickyColor
-    let journal: String?
+    var noteColor: StickyColor
+    var journal: String?
     
     var completed: Bool {
         length >= goalLength
