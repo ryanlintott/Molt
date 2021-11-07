@@ -8,23 +8,40 @@
 import SwiftUI
 
 struct StartPage: View {
+    @State var showSessionStart = false
+    @State var bottomSheetShown = false
     var body: some View {
         NavigationView {
+            
             VStack {
-                NavigationLink(destination: SessionParameterView()) {
-                    Text("Start a Session")
-                }
-                    .padding()
+                Image("banner")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 500, height: 180)
+                Spacer()
                 //change destination when DashboardView is completed
-                NavigationLink(destination: SessionParameterView()) {
+                Button("Begin",action: {
+                    self.showSessionStart = true
+                }).buttonStyle(DashedButtonStyle())
+                    .padding()
+                
+                BottomSheetView(
+                    isOpen: self.$bottomSheetShown,
+                    maxHeight: UIScreen.main.bounds.height * 0.7
+                ) {
                     ZStack {
-                        Text("**Summary**")
-                            .foregroundColor(.black)
-                        DashedBorderEffect(lineWidth: 6, width: 200, height: 100, cornerRadius: 18, color: .black)
+                        Color.black
+                        VStack {
+                            Text("**Sessions**")
+                                .foregroundColor(.white)
+                            .font(.largeTitle)
+                            Spacer()
+                        }
                     }
-                }
+                }.edgesIgnoringSafeArea(.all)
             }
-            .navigationBarTitle("Hello")
+        }.fullScreenCover(isPresented:self.$showSessionStart){
+            SessionParameterView()
         }
     }
 }

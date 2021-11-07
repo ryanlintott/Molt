@@ -22,19 +22,20 @@ struct SessionParameterView: View {
                     
                     HStack(spacing:20) {
                         Button(action:{
-                            self.time += 10
+                            self.time -= 10
                         }){
-                            Image(systemName: "plus.circle.fill")
+                            Image(systemName: "minus.circle.fill")
                                 .foregroundColor(.black)
                                 .font(.system(size: 40))
                         }
                         .padding()
                         Text("**\(Int(time)) min**")
                             .font(.system(size: 40, weight: .black, design: .rounded))
+                        
                         Button(action:{
-                            self.time -= 10
+                            self.time += 10
                         }){
-                            Image(systemName: "minus.circle.fill")
+                            Image(systemName: "plus.circle.fill")
                                 .foregroundColor(.black)
                                 .font(.system(size: 40))
                         }

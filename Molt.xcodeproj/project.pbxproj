@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		911B09562738270700C78C75 /* StickyStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B09552738270700C78C75 /* StickyStack.swift */; };
 		911B095A27382FDF00C78C75 /* SessionTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B095927382FDF00C78C75 /* SessionTimerView.swift */; };
+		911B095C2738458400C78C75 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B095B2738458400C78C75 /* BottomSheetView.swift */; };
 		91CBF0C62735857700C4E8BC /* StartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0C52735857700C4E8BC /* StartPage.swift */; };
 		91CBF0CD2735999500C4E8BC /* SessionParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0CC2735999500C4E8BC /* SessionParameterView.swift */; };
 		91CBF0D02735B3FC00C4E8BC /* ParallaxEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0CF2735B3FC00C4E8BC /* ParallaxEffect.swift */; };
@@ -63,6 +64,7 @@
 /* Begin PBXFileReference section */
 		911B09552738270700C78C75 /* StickyStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyStack.swift; sourceTree = "<group>"; };
 		911B095927382FDF00C78C75 /* SessionTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTimerView.swift; sourceTree = "<group>"; };
+		911B095B2738458400C78C75 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		91CBF0C52735857700C4E8BC /* StartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage.swift; sourceTree = "<group>"; };
 		91CBF0CC2735999500C4E8BC /* SessionParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionParameterView.swift; sourceTree = "<group>"; };
 		91CBF0CF2735B3FC00C4E8BC /* ParallaxEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxEffect.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				91CBF0CF2735B3FC00C4E8BC /* ParallaxEffect.swift */,
 				91CBF0D12735B44D00C4E8BC /* ParallaxDemo.swift */,
 				91CBF0D32736564B00C4E8BC /* DashedBorderEffect.swift */,
+				911B095B2738458400C78C75 /* BottomSheetView.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				CF0814BC2736B6D500D7E562 /* StickyWall.swift in Sources */,
 				CFA1CA072736FF970025EAEF /* WallSticky.swift in Sources */,
 				D59178922737CCD200F9C11A /* RandomImageGenerator.swift in Sources */,
+				911B095C2738458400C78C75 /* BottomSheetView.swift in Sources */,
 				91CBF0CD2735999500C4E8BC /* SessionParameterView.swift in Sources */,
 				CFA9CAD227382A390006C424 /* MoltData.xcdatamodeld in Sources */,
 				CFA1CA072736FF970025EAEF /* WallSticky.swift in Sources */,
