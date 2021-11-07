@@ -10,8 +10,9 @@ import Foundation
 public struct MoltSession: Identifiable {
     public var id = UUID()
     let dateStarted: Date
-    let length: TimeInterval
-    let goalLength: TimeInterval
+    let stressLevel: Int
+    let goalLength: Int
+    let length: Int
     let noteColor: StickyColor
     let journal: String?
     

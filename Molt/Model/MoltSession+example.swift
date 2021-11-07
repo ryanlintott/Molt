@@ -9,17 +9,18 @@ import Foundation
 
 extension MoltSession {
     static var example: MoltSession {
-        MoltSession(dateStarted: Date(), length: 110, goalLength: 120, noteColor: .stickyYellow, journal: "This is some sort of example journal entry.")
+        MoltSession(dateStarted: Date(), stressLevel: 20, goalLength: 120, length: 110, noteColor: .stickyYellow, journal: "This is some sort of example journal entry.")
     }
     
     static func example(journal: String? = "Example") -> MoltSession {
-        let goal = Int.random(in: 1...10)
-        let length = Int.random(in: 1...goal)
-        let multiplier = 30
+        let goalLength = Int.random(in: 1...10) * 60
+        let length = [Int.random(in: 1...goalLength), goalLength].randomElement()!
+
         return MoltSession(
             dateStarted: Date().addingTimeInterval(-TimeInterval.random(in: 0...10000)),
-            length: Double(length * multiplier),
-            goalLength: Double(goal * multiplier),
+            stressLevel: .random(in: 1...30),
+            goalLength: goalLength,
+            length: length,
             noteColor: .allCases.randomElement()!,
             journal: journal
         )
