@@ -9,13 +9,19 @@ import SwiftUI
 
 struct MainView: View {
     @State private var isShowingSession = false
-    
+    @State private var sessionState: SessionState = .complete
     
     var body: some View {
-        ZStack {
-            StartPage()
-            
-//            SessionView()
+        GeometryReader { proxy in
+            ZStack {
+                if sessionState == .complete {
+                    StartPage(maxHeight: proxy.size.height) {
+                        sessionState = .setup
+                    }
+                } else {
+                    SessionView(sessionState: $sessionState)
+                }
+            }
         }
     }
 }

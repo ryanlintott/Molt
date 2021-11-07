@@ -12,7 +12,8 @@ extension MoltSessionData {
     public var session: MoltSession? {
         guard
             let dateStarted = dateStarted,
-            let noteColor = noteColor
+            let noteColor = noteColor,
+            let journal = journal
         else {
             return nil
         }

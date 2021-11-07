@@ -12,7 +12,7 @@ struct DashboardListView: View {
     var body: some View {
         List{
             ForEach(sessions,id: \.id){ session in
-                StickyViewWithData(session: session, curveFactor: 0)
+                StickyViewWithData(session: .constant(session), curveFactor: 0)
             }
         }
         .listStyle(.sidebar)

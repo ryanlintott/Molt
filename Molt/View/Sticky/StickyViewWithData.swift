@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct StickyViewWithData: View {
-    let session: MoltSession
+    @Binding var session: MoltSession
     let curveFactor: CGFloat
+    let isEditable: Bool
+    
+    init(session: Binding<MoltSession>, curveFactor: CGFloat, isEditable: Bool = false) {
+        self._session = session
+        self.curveFactor = curveFactor
+        self.isEditable = isEditable
+        UITextView.appearance().backgroundColor = .clear
+    }
     
     var body: some View {
         VStack {
@@ -18,9 +26,14 @@ struct StickyViewWithData: View {
             
             Spacer()
             
-            Text(session.journal ?? "")
-                .fontWeight(.medium)
-                .multilineTextAlignment(.center)
+            Group {
+                if isEditable {
+                    TextEditor(text: $session.journal)
+                } else {
+                    Text(session.journal)
+                }
+            }
+            .font(.body.weight(.medium))
             
             Spacer()
             
@@ -51,6 +64,8 @@ struct StickyViewWithData: View {
 
 struct StickyViewWithData_Previews: PreviewProvider {
     static var previews: some View {
-        StickyViewWithData(session: .example, curveFactor: 0)
+        StickyViewWithData(session: .constant(.example), curveFactor: 0)
+        
+        StickyViewWithData(session: .constant(.example), curveFactor: 0, isEditable: true)
     }
 }

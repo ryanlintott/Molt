@@ -18,8 +18,6 @@ struct SessionParameterView: View {
     let minStress = 1
     let maxStress = 50
     
-    let images = ["bg1","bg2","bg3","bg4","bg5","bg6","bg7","bg8","bg9","bg10","bg11","bg12","bg13","bg14"]
-    
     var body: some View {
         VStack {
             HStack(spacing:20) {
@@ -29,9 +27,10 @@ struct SessionParameterView: View {
                     }
                 } label: {
                     Image(systemName: "minus.circle.fill")
-                        .foregroundColor(.black)
                         .font(.system(size: 40))
                 }
+                .foregroundColor(.black.opacity(goalLength == minTime ? 0.5 : 1))
+                .disabled(goalLength == minTime)
                 .padding()
                 
                 Text("**\(goalLength / 60) min**")
@@ -43,9 +42,10 @@ struct SessionParameterView: View {
                     }
                 } label: {
                     Image(systemName: "plus.circle.fill")
-                        .foregroundColor(.black)
                         .font(.system(size: 40))
                 }
+                .foregroundColor(.black.opacity(goalLength == maxTime ? 0.5 : 1))
+                .disabled(goalLength == maxTime)
                 .padding()
             }
             
@@ -65,6 +65,8 @@ struct SessionParameterView: View {
         }
     }
 }
+
+struct SessionParameterView_Previews: PreviewProvider {
     struct PreviewData: View {
         @State private var goalLength = 60
         @State private var stressLevel = 10
@@ -76,8 +78,6 @@ struct SessionParameterView: View {
         }
     }
     
-    }
-        PreviewData()
     static var previews: some View {
         PreviewData()
     }

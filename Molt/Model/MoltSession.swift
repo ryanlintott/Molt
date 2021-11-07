@@ -8,13 +8,13 @@
 import Foundation
 
 public struct MoltSession: Identifiable {
-    public var id = UUID()
-    let dateStarted: Date
-    let stressLevel: Int
-    let goalLength: Int
-    let length: Int
+    public let id = UUID()
+    var dateStarted: Date
+    var stressLevel: Int
+    var goalLength: Int
+    var length: Int
     var noteColor: StickyColor
-    var journal: String?
+    var journal: String
     
     var completed: Bool {
         length >= goalLength

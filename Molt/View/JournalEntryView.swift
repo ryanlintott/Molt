@@ -10,17 +10,25 @@ import SwiftUI
 struct JournalEntryView: View {
     @State private var journalText = "Note your Thoughts"
     @Binding var currentSession: MoltSession
+    
     let completion: () -> Void
+    
     var body: some View {
-                VStack {
-                    StickyViewWithData(session: currentSession, curveFactor: 0)
-                        .padding()
-                    ColorPickerView(chosenColor: $currentSession.noteColor)
-                        .padding()
-                    Button("Submit",action: {
-                        completion()
-                    }).buttonStyle(DashedButtonStyle())
-                }
+        VStack {
+            StickyViewWithData(session: $currentSession, curveFactor: 0)
+                .padding()
+            
+            ColorPickerView(chosenColor: $currentSession.noteColor)
+                .frame(height: 50)
+                .padding()
+            
+            Button("Submit") {
+                completion()
+            }
+            .buttonStyle(DashedButtonStyle())
+        
+            Spacer()
+        }
     }
 }
 

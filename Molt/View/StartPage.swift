@@ -8,49 +8,47 @@
 import SwiftUI
 
 struct StartPage: View {
-    @State var showSessionStart = false
-    @State var bottomSheetShown = false
+    @State private var showSessions = false
+    let maxHeight: CGFloat
+    let startSession: () -> Void
+    
     var body: some View {
-        NavigationView {
+        VStack {
+            Image("banner")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding(10)
             
-            VStack {
-                Image("banner")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding(10)
-                
-                Spacer()
-                
-                //change destination when DashboardView is completed
-                Button("Begin",action: {
-                    self.showSessionStart = true
-                }).buttonStyle(DashedButtonStyle())
-                    .padding()
-                
-                BottomSheetView(
-                    isOpen: self.$bottomSheetShown,
-                    maxHeight: UIScreen.main.bounds.height * 0.7
-                ) {
-                    ZStack {
-                        Color.black
-                        VStack {
-                            Text("**Sessions**")
-                                .foregroundColor(.white)
+            Spacer()
+            
+            //change destination when DashboardView is completed
+            Button("Begin",action: {
+                startSession()
+            }).buttonStyle(DashedButtonStyle())
+                .padding()
+            
+            BottomSheetView(
+                isOpen: $showSessions,
+                maxHeight: UIScreen.main.bounds.height * 0.7
+            ) {
+                ZStack {
+                    Color.black
+                    VStack {
+                        Text("**Sessions**")
+                            .foregroundColor(.white)
                             .font(.largeTitle)
-                            Spacer()
-                        }
+                        Spacer()
                     }
-                }.edgesIgnoringSafeArea(.all)
-            }
-        }.fullScreenCover(isPresented:self.$showSessionStart){
-            EmptyView()
-//            SessionParameterView()
+                }
+            }.edgesIgnoringSafeArea(.all)
         }
     }
 }
 
 struct StartPage_Previews: PreviewProvider {
     static var previews: some View {
-        StartPage()
+        StartPage(maxHeight: 100) {
+            // start session
+        }
     }
 }

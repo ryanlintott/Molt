@@ -27,6 +27,8 @@ struct InteractiveStickyView: View {
             return abs((flutterPhase + curvePhase).truncatingRemainder(dividingBy: 2) - 1) * 0.2
         }
     }
+    
+    let completion: () -> Void
 
     var dragSticky: some Gesture {
         DragGesture()
@@ -60,13 +62,16 @@ struct InteractiveStickyView: View {
                 }
                 withAnimation(.easeIn(duration: 0.8)) {
                     finalOffset = CGSize(width: 0, height: dropHeight)
+                    
                 }
+                end()
             }
             .onChange(of: isDragging) { isDragging in
                 if !isDragging {
                     withAnimation(.easeIn(duration: 0.8)) {
                         finalOffset = CGSize(width: predictedDragOffset.width, height: dropHeight)
                     }
+                    end()
                 } else {
                     isHovering = true
                 }
@@ -78,10 +83,18 @@ struct InteractiveStickyView: View {
                 }
             }
     }
+    
+    func end() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+            self.completion()
+        }
+    }
 }
 
 struct InteractiveStickyView_Previews: PreviewProvider {
     static var previews: some View {
-        InteractiveStickyView(color: .stickyYellow, size: 100, dropHeight: 1000, curvePhase: 0, imageName: "scribble1")
+        InteractiveStickyView(color: .stickyYellow, size: 100, dropHeight: 1000, curvePhase: 0, imageName: "scribble1") {
+            // completion
+        }
     }
 }
