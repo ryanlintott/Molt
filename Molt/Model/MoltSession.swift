@@ -11,6 +11,7 @@ struct MoltSession {
     let dateStarted: Date
     let length: TimeInterval
     let goalLength: TimeInterval
+    let journal: String?
     
     var completed: Bool {
         length > goalLength
