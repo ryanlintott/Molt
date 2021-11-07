@@ -14,7 +14,8 @@ struct MoltSession: Identifiable {
     let goalLength: TimeInterval
     let userNote: String
     let noteColor: MoltColors
-    var completed: Bool {
+    let journal: String?
+        var completed: Bool {
         length >= goalLength
     }
 }
