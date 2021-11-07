@@ -8,30 +8,35 @@
 import SwiftUI
 
 struct JournalEntryView: View {
-    @State private var journalText = "Thoughts..."
-    @State var currentColor: Color = .clear
+    @State private var journalText = "Note your Thoughts"
+    @Binding var currentSession: MoltSession
+    let completion: () -> Void
     var body: some View {
-        NavigationView{
-            VStack {
-                ZStack {
-                    currentColor
-                        .frame(width: 300, height: 200)
-                    ColorPickerView(chosenColor: $currentColor)
-                        .frame(width: 50, height: 200, alignment:.trailing)
-                                    .offset(x: 150, y: 50)
-                    
-                    
+                VStack {
+                    StickyViewWithData(session: currentSession, curveFactor: 0)
+                        .padding()
+                    ColorPickerView(chosenColor: $currentSession.noteColor)
+                        .padding()
+                    Button("Submit",action: {
+                        completion()
+                    }).buttonStyle(DashedButtonStyle())
                 }
-                
-                
-            }
-            
-        }
     }
 }
 
 struct JournalEntryView_Previews: PreviewProvider {
+    
+    struct PreviewData: View {
+        @State var currentSession: MoltSession = .example
+
+        var body: some View {
+            JournalEntryView( currentSession: $currentSession) {
+                // Please Run
+            }
+        }
+    }
+    
     static var previews: some View {
-        JournalEntryView()
+        PreviewData()
     }
 }
