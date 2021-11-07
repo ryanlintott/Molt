@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StickyView: View {
     let color: Color
-    @Binding var curveFactor: CGFloat
+    let curveFactor: CGFloat
     
     var gradient: LinearGradient {
         LinearGradient(stops: [.init(color: .white, location: curveFactor), .init(color: .white.opacity(0), location: 1)], startPoint: .bottom, endPoint: .top)
@@ -26,14 +26,14 @@ struct StickyView: View {
                 .blendMode(.screen)
             
             Sticky(curveFactor: curveFactor)
-                .stroke(Color.gray.opacity(0.3))
+                .stroke(Color.gray.opacity(0.1))
         }
     }
 }
 
 struct StickyView_Previews: PreviewProvider {
     static var previews: some View {
-        StickyView(color: .yellow, curveFactor: .constant(0.2))
+        StickyView(color: .stickyYellow, curveFactor: 0.2)
                 .frame(width: 200, height: 200)
     }
 }
