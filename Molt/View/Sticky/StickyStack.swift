@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StickyVStack: View {
+struct StickyStack: View {
     let colors: [(Int, Color)]
     let spacing: CGFloat
     let edge: Edge
@@ -79,7 +79,7 @@ struct StickyStack_Previews: PreviewProvider {
             VStack {
                 Spacer()
                 
-                StickyVStack(count: count, spacing: 20, edge: edge)
+                StickyStack(count: count, spacing: 20, edge: edge)
                 
                 Picker("Edge", selection: $edge) {
                     ForEach(Edge.allCases, id: \.self) { edge in

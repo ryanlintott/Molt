@@ -17,8 +17,10 @@ struct StartPage: View {
                 Image("banner")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 500, height: 180)
+                    .padding(10)
+                
                 Spacer()
+                
                 //change destination when DashboardView is completed
                 Button("Begin",action: {
                     self.showSessionStart = true
@@ -41,7 +43,8 @@ struct StartPage: View {
                 }.edgesIgnoringSafeArea(.all)
             }
         }.fullScreenCover(isPresented:self.$showSessionStart){
-            SessionParameterView()
+            EmptyView()
+//            SessionParameterView()
         }
     }
 }
