@@ -15,6 +15,10 @@ struct StickyView: View {
         LinearGradient(stops: [.init(color: .white, location: curveFactor), .init(color: .white.opacity(0), location: 1)], startPoint: .bottom, endPoint: .top)
     }
     
+    var imageName: String {
+        randomImage()
+    }
+    
     var body: some View {
         ZStack {
             Sticky(curveFactor: curveFactor)
@@ -27,6 +31,9 @@ struct StickyView: View {
             
             Sticky(curveFactor: curveFactor)
                 .stroke(Color.gray.opacity(0.1))
+//            Image(imageName)
+//                .resizable()
+//                .scaledToFit()
         }
     }
 }

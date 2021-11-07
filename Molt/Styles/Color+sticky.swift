@@ -30,3 +30,46 @@ extension Color {
         return Array(0...(loops - 1)).reduce([], { result, _ in result + stickyColors }) + excess
     }
 }
+
+enum MoltColors {
+    case stickyYellow
+    case stickyBlue
+    case stickyGreen
+    case stickyPink
+    case stickyOrange
+    case custom
+}
+
+extension MoltColors: RawRepresentable {
+    typealias RawValue = Color
+    
+    init?(rawValue: Color) {
+        switch rawValue {
+        case Color.stickyYellow:
+            self = .stickyYellow
+        case Color.stickyOrange:
+            self = .stickyOrange
+        case Color.stickyPink:
+            self = .stickyPink
+        case Color.stickyGreen:
+            self = .stickyGreen
+        case Color.stickyBlue:
+            self = .stickyBlue
+        default:
+            self = .stickyYellow
+        }
+    }
+    
+    var rawValue: RawValue {
+            switch self {
+            case .stickyYellow: return Color.stickyYellow
+            case .stickyBlue: return Color.stickyBlue
+            case .stickyGreen: return Color.stickyGreen
+            case .stickyOrange: return Color.stickyOrange
+            case .stickyPink: return Color.stickyPink
+            default: return Color.stickyYellow
+            }
+        }
+}
+
+

@@ -6,18 +6,21 @@
 //
 
 import SwiftUI
-
-struct DashboardListView: View {
-    var body: some View {
-        List{
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        }
-        
-    }
-}
-
-struct DashboardListView_Previews: PreviewProvider {
-    static var previews: some View {
-        DashboardListView()
-    }
-}
+//
+//struct DashboardListView: View {
+//    let sessions: [MoltSession]
+//    var body: some View {
+//        List{
+//            ForEach(sessions,id: \.id){ session in
+//                StickyView(color: session.noteColor.rawValue, curveFactor: <#T##CGFloat#>)
+//            }
+//        }
+//        
+//    }
+//}
+//
+//struct DashboardListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DashboardListView(sessions: <#[MoltSession]#>)
+//    }
+//}
