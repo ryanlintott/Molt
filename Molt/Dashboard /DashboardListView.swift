@@ -14,13 +14,17 @@ struct DashboardListView: View {
             ForEach(sessions,id: \.id){ session in
                 StickyViewWithData(color: session.noteColor.rawValue, curveFactor: 0, sessionData: session)
             }
-        }.frame(width: UIScreen.screenWidth, height: UIScreen.screenHeight)
+        }
+        .listStyle(.sidebar)
     }
 }
 
 struct DashboardListView_Previews:
     PreviewProvider {
     static var previews: some View {
-        DashboardListView(sessions: [MoltSession(dateStarted: Date.distantPast, length: 110, goalLength: 120, userNote: "Lorem Ipsum Bla bla bla gdsghsgd gdsgds asjkdh hsdjkhdkjhs jshdkjsahkdjh kjsdhkajshd kjdhsjkdhkajs hsjdhasjdh ahjdksjhdj", noteColor: .stickyBlue),MoltSession(dateStarted: Date.distantPast, length: 110, goalLength: 120, userNote: "Lorem Ipsum Bla bla bla gdsghsgd gdsgds asjkdh hsdjkhdkjhs jshdkjsahkdjh kjsdhkajshd kjdhsjkdhkajs hsjdhasjdh ahjdksjhdj", noteColor: .stickyBlue),MoltSession(dateStarted: Date.distantPast, length: 110, goalLength: 120, userNote: "Lorem Ipsum Bla bla bla gdsghsgd gdsgds asjkdh hsdjkhdkjhs jshdkjsahkdjh kjsdhkajshd kjdhsjkdhkajs hsjdhasjdh ahjdksjhdj", noteColor: .stickyBlue)])
+        DashboardListView(sessions: [
+            MoltSession(dateStarted: Date.distantPast, length: 120, goalLength: 120, userNote: "Lorem Ipsum Bla bla bla gdsghsgd gdsgds asjkdh hsdjkhdkjhs jshdkjsahkdjh kjsdhkajshd kjdhsjkdhkajs hsjdhasjdh ahjdksjhdj", noteColor: .stickyBlue),
+            MoltSession(dateStarted: Date.distantPast, length: 10, goalLength: 120, userNote: "Hello", noteColor: .stickyYellow),
+            MoltSession(dateStarted: Date.distantPast, length: 60, goalLength: 60, userNote: "Lorem Ipsum Bla bla bla gdsghsgd gdsgds asjkdh hsdjkhdkjh", noteColor: .stickyPink)])
     }
 }
