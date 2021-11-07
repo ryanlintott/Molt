@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct SessionParameterView: View {
-    @State var time:CGFloat = 0
+    @State var startSession = false
+    @State var time:Int = 0
     @State var maxHeight = UIScreen.main.bounds.height/3
     //progress
     @State var sliderProgress:CGFloat = 0
@@ -89,9 +90,12 @@ struct SessionParameterView: View {
                     .font(.system(size: 30, weight: .black, design: .rounded))
                 Button("Start",action: {
                     //start a session
+                    self.startSession.toggle()
                 }).buttonStyle(DashedButtonStyle())
                     .padding()
                 
+            }.sheet(isPresented:self.$startSession){
+                SessionTimerView(time: self.$time)
             }
             
         }
