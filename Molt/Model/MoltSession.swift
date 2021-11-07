@@ -7,13 +7,15 @@
 
 import Foundation
 
-struct MoltSession {
+struct MoltSession: Identifiable {
+    var id = UUID()
     let dateStarted: Date
     let length: TimeInterval
     let goalLength: TimeInterval
+    let userNote: String
+    let noteColor: MoltColors
     let journal: String?
-    
-    var completed: Bool {
-        length > goalLength
+        var completed: Bool {
+        length >= goalLength
     }
 }

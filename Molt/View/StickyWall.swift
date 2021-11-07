@@ -12,13 +12,12 @@ struct StickyWall: View {
     let frame: CGSize
     let stickySize: CGFloat = 100
     let dropHeight: CGFloat = 1000
-    
     var body: some View {
         ZStack {
             Color.clear
             
             ForEach(stickies) { sticky in
-                InteractiveStickyView(color: sticky.color, size: stickySize, dropHeight: dropHeight, curvePhase: sticky.curvePhase)
+                InteractiveStickyView(color: sticky.color, size: stickySize, dropHeight: dropHeight, curvePhase: sticky.curvePhase, imageName: randomImage())
                     .position(
                         x: frame.width * sticky.x,
                         y: frame.height * sticky.y

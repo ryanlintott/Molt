@@ -39,6 +39,9 @@
 		CFA9CACE273816ED0006C424 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CACD273816ED0006C424 /* Diamond.swift */; };
 		CFA1CA072736FF970025EAEF /* WallSticky.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1CA062736FF970025EAEF /* WallSticky.swift */; };
 		CFA1CA0927371E790025EAEF /* InteractiveStickyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1CA0827371E790025EAEF /* InteractiveStickyView.swift */; };
+		D59178922737CCD200F9C11A /* RandomImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59178912737CCD200F9C11A /* RandomImageGenerator.swift */; };
+		D59178942737D96200F9C11A /* StickyViewWithData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59178932737D96200F9C11A /* StickyViewWithData.swift */; };
+		D5B565DE2735C5EF0044F6BF /* DashboardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B565DD2735C5EF0044F6BF /* DashboardListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,9 @@
 		CFA9CACD273816ED0006C424 /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
 		CFA1CA062736FF970025EAEF /* WallSticky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallSticky.swift; sourceTree = "<group>"; };
 		CFA1CA0827371E790025EAEF /* InteractiveStickyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveStickyView.swift; sourceTree = "<group>"; };
+		D59178912737CCD200F9C11A /* RandomImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageGenerator.swift; sourceTree = "<group>"; };
+		D59178932737D96200F9C11A /* StickyViewWithData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyViewWithData.swift; sourceTree = "<group>"; };
+		D5B565DD2735C5EF0044F6BF /* DashboardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,7 @@
 		CF8B11AA2735826B00579F46 /* Molt */ = {
 			isa = PBXGroup;
 			children = (
+				D5B565DC2735C58C0044F6BF /* Dashboard  */,
 				CFA9CACF273829EC0006C424 /* Data */,
 				CF8B11E32735F36500579F46 /* Model */,
 				CF8B11E22735F32F00579F46 /* Styles */,
@@ -215,6 +222,7 @@
 				CF8B11D92735A2C200579F46 /* StickyView.swift */,
 				CFA1CA0827371E790025EAEF /* InteractiveStickyView.swift */,
 				CF8B11DB2735A2D000579F46 /* StickyViewDemo.swift */,
+				D59178932737D96200F9C11A /* StickyViewWithData.swift */,
 				911B09552738270700C78C75 /* StickyStack.swift */,
 				911B09572738274E00C78C75 /* StackableSticky.swift */,
 			);
@@ -227,6 +235,7 @@
 				CF8B11E02735F2B200579F46 /* Color+sticky.swift */,
 				CF0814B72736B09B00D7E562 /* StrokeStyle+dashed.swift */,
 				CF0814B92736B11B00D7E562 /* DashedButtonStyle.swift */,
+				D59178912737CCD200F9C11A /* RandomImageGenerator.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -241,6 +250,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D5B565DC2735C58C0044F6BF /* Dashboard  */ = {
+			isa = PBXGroup;
+			children = (
+				D5B565DD2735C5EF0044F6BF /* DashboardListView.swift */,
+			);
+			path = "Dashboard ";
+               sourceTree = "<group>";
+        };
 		CFA9CACF273829EC0006C424 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +403,8 @@
 				CFA9CACE273816ED0006C424 /* Diamond.swift in Sources */,
 				CF8B11DA2735A2C200579F46 /* StickyView.swift in Sources */,
 				CF0814BC2736B6D500D7E562 /* StickyWall.swift in Sources */,
+				CFA1CA072736FF970025EAEF /* WallSticky.swift in Sources */,
+				D59178922737CCD200F9C11A /* RandomImageGenerator.swift in Sources */,
 				91CBF0CD2735999500C4E8BC /* SliderAnimation.swift in Sources */,
 				CFA9CAD227382A390006C424 /* MoltData.xcdatamodeld in Sources */,
 				91CBF0C8273585B500C4E8BC /* SessionParamView.swift in Sources */,
@@ -402,9 +421,11 @@
 				CF8B11AC2735826B00579F46 /* MoltApp.swift in Sources */,
 				911B09562738270700C78C75 /* StickyStack.swift in Sources */,
 				CFA1CA0927371E790025EAEF /* InteractiveStickyView.swift in Sources */,
+				D59178942737D96200F9C11A /* StickyViewWithData.swift in Sources */,
 				CF8B11D82735889000579F46 /* Sticky.swift in Sources */,
 				911B09582738274E00C78C75 /* StackableSticky.swift in Sources */,
 				CF8B11DC2735A2D000579F46 /* StickyViewDemo.swift in Sources */,
+				D5B565DE2735C5EF0044F6BF /* DashboardListView.swift in Sources */,
 				91CBF0D22735B44D00C4E8BC /* ParallaxDemo.swift in Sources */,
 				91CBF0D42736564B00C4E8BC /* DashedBorderEffect.swift in Sources */,
 				CFA9CAD427382AD10006C424 /* MoltSessionData.swift in Sources */,
