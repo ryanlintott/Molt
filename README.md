@@ -20,9 +20,9 @@
 ## Inspiration
 
 
-
 ## How we built it/ Challenges we ran into
 
+## Snapshots/Demo Video
 
 ## Accomplishments that we're proud of
 
