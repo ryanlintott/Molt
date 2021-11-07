@@ -30,6 +30,10 @@
 		CF8B11DC2735A2D000579F46 /* StickyViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11DB2735A2D000579F46 /* StickyViewDemo.swift */; };
 		CF8B11DF2735F21F00579F46 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8B11DE2735F21F00579F46 /* Colors.xcassets */; };
 		CF8B11E12735F2B200579F46 /* Color+sticky.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11E02735F2B200579F46 /* Color+sticky.swift */; };
+		CFA9CAD227382A390006C424 /* MoltData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CAD027382A390006C424 /* MoltData.xcdatamodeld */; };
+		CFA9CAD427382AD10006C424 /* MoltSessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CAD327382AD10006C424 /* MoltSessionData.swift */; };
+		CFA9CB1327382EC40006C424 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CB1227382EC40006C424 /* Persistence.swift */; };
+		CFA9CB1527382EF60006C424 /* MoltSession+example.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CB1427382EF60006C424 /* MoltSession+example.swift */; };
 		CFA9CACC273816B40006C424 /* StickyStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CACB273816B40006C424 /* StickyStack.swift */; };
 		CFA9CACE273816ED0006C424 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CACD273816ED0006C424 /* Diamond.swift */; };
 		CFA1CA072736FF970025EAEF /* WallSticky.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1CA062736FF970025EAEF /* WallSticky.swift */; };
@@ -80,6 +84,10 @@
 		CF8B11DB2735A2D000579F46 /* StickyViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyViewDemo.swift; sourceTree = "<group>"; };
 		CF8B11DE2735F21F00579F46 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CF8B11E02735F2B200579F46 /* Color+sticky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+sticky.swift"; sourceTree = "<group>"; };
+		CFA9CAD127382A390006C424 /* MoltData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoltData.xcdatamodel; sourceTree = "<group>"; };
+		CFA9CAD327382AD10006C424 /* MoltSessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoltSessionData.swift; sourceTree = "<group>"; };
+		CFA9CB1227382EC40006C424 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		CFA9CB1427382EF60006C424 /* MoltSession+example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoltSession+example.swift"; sourceTree = "<group>"; };
 		CFA9CACB273816B40006C424 /* StickyStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyStack.swift; sourceTree = "<group>"; };
 		CFA9CACD273816ED0006C424 /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
 		CFA1CA062736FF970025EAEF /* WallSticky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallSticky.swift; sourceTree = "<group>"; };
@@ -156,6 +164,7 @@
 		CF8B11AA2735826B00579F46 /* Molt */ = {
 			isa = PBXGroup;
 			children = (
+				CFA9CACF273829EC0006C424 /* Data */,
 				CF8B11E32735F36500579F46 /* Model */,
 				CF8B11E22735F32F00579F46 /* Styles */,
 				91CBF0C32735850D00C4E8BC /* View */,
@@ -223,8 +232,19 @@
 			isa = PBXGroup;
 			children = (
 				CF8B11D52735855400579F46 /* MoltSession.swift */,
+				CFA9CB1427382EF60006C424 /* MoltSession+example.swift */,
+				CFA9CB1227382EC40006C424 /* Persistence.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CFA9CACF273829EC0006C424 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CFA9CAD027382A390006C424 /* MoltData.xcdatamodeld */,
+				CFA9CAD327382AD10006C424 /* MoltSessionData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,10 +382,15 @@
 				CFA9CACE273816ED0006C424 /* Diamond.swift in Sources */,
 				CF8B11DA2735A2C200579F46 /* StickyView.swift in Sources */,
 				CF0814BC2736B6D500D7E562 /* StickyWall.swift in Sources */,
+				91CBF0CD2735999500C4E8BC /* SliderAnimation.swift in Sources */,
+				CFA9CAD227382A390006C424 /* MoltData.xcdatamodeld in Sources */,
+				91CBF0C8273585B500C4E8BC /* SessionParamView.swift in Sources */,
 				CFA1CA072736FF970025EAEF /* WallSticky.swift in Sources */,
 				91CBF0CD2735999500C4E8BC /* SessionParameterView.swift in Sources */,
 				91CBF0C62735857700C4E8BC /* StartPage.swift in Sources */,
+				CFA9CB1527382EF60006C424 /* MoltSession+example.swift in Sources */,
 				91CBF0D02735B3FC00C4E8BC /* ParallaxEffect.swift in Sources */,
+				CFA9CB1327382EC40006C424 /* Persistence.swift in Sources */,
 				CF0814B82736B09B00D7E562 /* StrokeStyle+dashed.swift in Sources */,
 				CF8B11E12735F2B200579F46 /* Color+sticky.swift in Sources */,
 				CF0814BA2736B11B00D7E562 /* DashedButtonStyle.swift in Sources */,
@@ -378,6 +403,7 @@
 				CF8B11DC2735A2D000579F46 /* StickyViewDemo.swift in Sources */,
 				91CBF0D22735B44D00C4E8BC /* ParallaxDemo.swift in Sources */,
 				91CBF0D42736564B00C4E8BC /* DashedBorderEffect.swift in Sources */,
+				CFA9CAD427382AD10006C424 /* MoltSessionData.swift in Sources */,
 				CF8B11D62735855400579F46 /* MoltSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -727,6 +753,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CFA9CAD027382A390006C424 /* MoltData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CFA9CAD127382A390006C424 /* MoltData.xcdatamodel */,
+			);
+			currentVersion = CFA9CAD127382A390006C424 /* MoltData.xcdatamodel */;
+			path = MoltData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CF8B11A02735826B00579F46 /* Project object */;
 }
