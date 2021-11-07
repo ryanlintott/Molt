@@ -16,6 +16,7 @@ struct SessionParameterView: View {
     @State var sliderHeight:CGFloat = 0
     @State var lastDragValue:CGFloat = 0
     var body: some View {
+        let images = ["bg1","bg2","bg3","bg4","bg5","bg6","bg7","bg8","bg9","bg10","bg11","bg12","bg13","bg14"]
         NavigationView {
             VStack {
                 VStack {
@@ -96,7 +97,7 @@ struct SessionParameterView: View {
                     .padding()
                 
             }.sheet(isPresented:self.$startSession){
-                SessionTimerView(totalTime: time)
+                SessionTimerView(totalTime: time*60, backgroundImage: images.randomElement() ?? "bg1")
             }
             
         }
