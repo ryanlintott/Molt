@@ -46,6 +46,7 @@
 		CFA9CB2127385AF30006C424 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CB2027385AF30006C424 /* MainView.swift */; };
 		CFA9CB2327385B990006C424 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CB2227385B990006C424 /* SessionView.swift */; };
 		CFA9CB252738696B0006C424 /* StickyStackSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CB242738696B0006C424 /* StickyStackSlider.swift */; };
+		CFBB63AA2739C1A300C7F0B9 /* SessionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBB63A92739C1A300C7F0B9 /* SessionListView.swift */; };
 		D59178922737CCD200F9C11A /* RandomImageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59178912737CCD200F9C11A /* RandomImageGenerator.swift */; };
 		D59178942737D96200F9C11A /* StickyViewWithData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59178932737D96200F9C11A /* StickyViewWithData.swift */; };
 		D5B565DE2735C5EF0044F6BF /* DashboardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B565DD2735C5EF0044F6BF /* DashboardListView.swift */; };
@@ -111,6 +112,7 @@
 		CFA9CB2027385AF30006C424 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CFA9CB2227385B990006C424 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
 		CFA9CB242738696B0006C424 /* StickyStackSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyStackSlider.swift; sourceTree = "<group>"; };
+		CFBB63A92739C1A300C7F0B9 /* SessionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionListView.swift; sourceTree = "<group>"; };
 		D59178912737CCD200F9C11A /* RandomImageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageGenerator.swift; sourceTree = "<group>"; };
 		D59178932737D96200F9C11A /* StickyViewWithData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyViewWithData.swift; sourceTree = "<group>"; };
 		D5B565DD2735C5EF0044F6BF /* DashboardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardListView.swift; sourceTree = "<group>"; };
@@ -146,16 +148,17 @@
 			children = (
 				CF8B11DD2735A43E00579F46 /* Sticky */,
 				91CBF0CE2735A66D00C4E8BC /* Animation */,
-				91CBF0C52735857700C4E8BC /* StartPage.swift */,
 				CFA9CB2027385AF30006C424 /* MainView.swift */,
+				91CBF0C52735857700C4E8BC /* StartPage.swift */,
+				CFBB63A92739C1A300C7F0B9 /* SessionListView.swift */,
 				CFA9CB2227385B990006C424 /* SessionView.swift */,
 				91CBF0CC2735999500C4E8BC /* SessionParameterView.swift */,
-				CFA9CB242738696B0006C424 /* StickyStackSlider.swift */,
 				CF0814BB2736B6D500D7E562 /* StickyWall.swift */,
 				911B095927382FDF00C78C75 /* SessionTimerView.swift */,
 				CFA9CB1C273844C60006C424 /* GlassViewModifier.swift */,
 				CFA9CB1D273844C60006C424 /* HapticManager.swift */,
 				911B095D2738502100C78C75 /* JournalEntryView.swift */,
+				D5B565DD2735C5EF0044F6BF /* DashboardListView.swift */,
 				911B095F273853F700C78C75 /* ColorPickerView.swift */,
 			);
 			path = View;
@@ -195,7 +198,6 @@
 		CF8B11AA2735826B00579F46 /* Molt */ = {
 			isa = PBXGroup;
 			children = (
-				D5B565DC2735C58C0044F6BF /* Dashboard  */,
 				CFA9CACF273829EC0006C424 /* Data */,
 				CF8B11E32735F36500579F46 /* Model */,
 				CF8B11E22735F32F00579F46 /* Styles */,
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				CFA9CACB273816B40006C424 /* StickyStack.swift */,
+				CFA9CB242738696B0006C424 /* StickyStackSlider.swift */,
 				CFA9CACD273816ED0006C424 /* Diamond.swift */,
 				CFA1CA062736FF970025EAEF /* WallSticky.swift */,
 				CF8B11D72735889000579F46 /* Sticky.swift */,
@@ -278,14 +281,6 @@
 				CFA9CAD327382AD10006C424 /* MoltSessionData.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		D5B565DC2735C58C0044F6BF /* Dashboard  */ = {
-			isa = PBXGroup;
-			children = (
-				D5B565DD2735C5EF0044F6BF /* DashboardListView.swift */,
-			);
-			path = "Dashboard ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF8B11AE2735826B00579F46 /* ContentView.swift in Sources */,
+				CFBB63AA2739C1A300C7F0B9 /* SessionListView.swift in Sources */,
 				911B095A27382FDF00C78C75 /* SessionTimerView.swift in Sources */,
 				CFA9CB1F273844C60006C424 /* HapticManager.swift in Sources */,
 				CFA9CACE273816ED0006C424 /* Diamond.swift in Sources */,

@@ -8,7 +8,7 @@
 import Foundation
 
 public struct MoltSession: Identifiable {
-    public let id = UUID()
+    public let id: UUID
     var dateStarted: Date
     var stressLevel: Int
     var goalLength: Int

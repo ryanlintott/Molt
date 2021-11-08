@@ -16,7 +16,7 @@ struct SessionView: View {
     
     @Binding var sessionState: SessionState
     @State private var image = Image(images.randomElement() ?? "bg1")
-    @State private var session = MoltSession(dateStarted: Date(), stressLevel: 10, goalLength: 120, length: 0, noteColor: .stickyYellow, journal: "")
+    @State private var session = MoltSession(id: UUID(), dateStarted: Date(), stressLevel: 10, goalLength: 120, length: 0, noteColor: .stickyYellow, journal: "")
     
     var material: Material {
         switch sessionState {

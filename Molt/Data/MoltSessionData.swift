@@ -11,6 +11,7 @@ import Foundation
 extension MoltSessionData {
     public var session: MoltSession? {
         guard
+            let id = id,
             let dateStarted = dateStarted,
             let noteColor = noteColor,
             let journal = journal
@@ -21,7 +22,7 @@ extension MoltSessionData {
             return nil
         }
         
-        return MoltSession(dateStarted: dateStarted, stressLevel: Int(stressLevel), goalLength: Int(goalLength), length: Int(length), noteColor: stickyColor, journal: journal)
+        return MoltSession(id: id, dateStarted: dateStarted, stressLevel: Int(stressLevel), goalLength: Int(goalLength), length: Int(length), noteColor: stickyColor, journal: journal)
     }
     
     convenience init(context: NSManagedObjectContext, from session: MoltSession) {
@@ -30,6 +31,7 @@ extension MoltSessionData {
     }
     
     func setValues(from session: MoltSession) {
+        id = session.id
         dateStarted = session.dateStarted
         stressLevel = Int16(session.stressLevel)
         length = Int16(session.length)

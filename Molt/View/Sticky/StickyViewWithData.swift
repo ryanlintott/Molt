@@ -19,6 +19,12 @@ struct StickyViewWithData: View {
         UITextView.appearance().backgroundColor = .clear
     }
     
+    let placeholder = "Thoughts..."
+    
+    var isPlaceholder: Bool {
+        session.journal == ""
+    }
+    
     var body: some View {
         VStack {
             Text(dateStringGenerator(date:session.dateStarted))
@@ -29,6 +35,19 @@ struct StickyViewWithData: View {
             Group {
                 if isEditable {
                     TextEditor(text: $session.journal)
+                        .background(
+                            .white.opacity(0.2)
+                        )
+                        .background(
+                            Group {
+                                if isPlaceholder {
+                                    Text(placeholder)
+                                        .foregroundColor(.gray)
+                                        .padding(8)
+                                }
+                            }
+                            , alignment: .topLeading
+                        )
                 } else {
                     Text(session.journal)
                 }
@@ -38,7 +57,8 @@ struct StickyViewWithData: View {
             Spacer()
             
             HStack{
-                Text("Timing")
+                StickyStack(count: session.stressLevel, spacing: 2, edge: .leading)
+                    .frame(height: 40)
                 
                 Spacer()
                 
@@ -66,6 +86,6 @@ struct StickyViewWithData_Previews: PreviewProvider {
     static var previews: some View {
         StickyViewWithData(session: .constant(.example), curveFactor: 0)
         
-        StickyViewWithData(session: .constant(.example), curveFactor: 0, isEditable: true)
+        StickyViewWithData(session: .constant(.examples[2]), curveFactor: 0, isEditable: true)
     }
 }

@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct StartPage: View {
-    @State private var showSessions = false
+    @State private var isShowingSessions = false
     let maxHeight: CGFloat
     let startSession: () -> Void
+    
+    @State private var examples = MoltSession.examples
     
     var body: some View {
         VStack {
@@ -19,29 +21,24 @@ struct StartPage: View {
                 .aspectRatio(contentMode: .fit)
                 .padding(10)
             
-            Spacer()
-            
             //change destination when DashboardView is completed
             Button("Begin",action: {
                 startSession()
             }).buttonStyle(DashedButtonStyle())
                 .padding()
             
-            BottomSheetView(
-                isOpen: $showSessions,
-                maxHeight: UIScreen.main.bounds.height * 0.7
-            ) {
+            Spacer()
+        }
+        .overlay(
+            BottomSheetView(isOpen: $isShowingSessions, closedOffset: 200, openOffset: 0) {
                 ZStack {
                     Color.black
-                    VStack {
-                        Text("**Sessions**")
-                            .foregroundColor(.white)
-                            .font(.largeTitle)
-                        Spacer()
-                    }
+                    
+                    DashboardListView(sessions: examples)
+//                    SessionListView()
                 }
-            }.edgesIgnoringSafeArea(.all)
-        }
+            }
+        )
     }
 }
 
@@ -50,5 +47,6 @@ struct StartPage_Previews: PreviewProvider {
         StartPage(maxHeight: 100) {
             // start session
         }
+        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

@@ -20,65 +20,90 @@ fileprivate enum Constants {
 struct BottomSheetView<Content: View>: View {
     @Binding var isOpen: Bool
 
-    let maxHeight: CGFloat
-    let minHeight: CGFloat
-    let content: Content
+    let closedOffset: CGFloat
+    let openOffset: CGFloat
+    let content: () -> Content
 
-    @GestureState private var translation: CGFloat = 0
+    @GestureState private var isDragging = false
+    @State private var dragOffset: CGFloat = .zero
 
-    private var offset: CGFloat {
-        isOpen ? 0 : maxHeight - minHeight
-    }
-
-    private var indicator: some View {
+    var indicator: some View {
         RoundedRectangle(cornerRadius: Constants.radius)
             .fill(Color.white)
             .frame(
                 width: Constants.indicatorWidth,
                 height: Constants.indicatorHeight
-        ).onTapGesture {
-            self.isOpen.toggle()
-        }
-    }
-
-    init(isOpen: Binding<Bool>, maxHeight: CGFloat, @ViewBuilder content: () -> Content) {
-        self.minHeight = maxHeight * Constants.minHeightRatio
-        self.maxHeight = maxHeight
-        self.content = content()
-        self._isOpen = isOpen
+        )
     }
 
     var body: some View {
-        GeometryReader { geometry in
-            VStack(spacing: 0) {
-                self.indicator.padding()
-                self.content
-            }
-            .frame(width: geometry.size.width, height: self.maxHeight, alignment: .top)
-            .background(Color(.black))
-            .cornerRadius(Constants.radius)
-            .frame(height: geometry.size.height, alignment: .bottom)
-            .offset(y: max(self.offset + self.translation, 0))
-            .animation(.interactiveSpring())
-            .gesture(
-                DragGesture().updating(self.$translation) { value, state, _ in
-                    state = value.translation.height
-                }.onEnded { value in
-                    let snapDistance = self.maxHeight * Constants.snapRatio
-                    guard abs(value.translation.height) > snapDistance else {
-                        return
+        GeometryReader { proxy in
+            VStack {
+                indicator
+                    .padding()
+                    .onTapGesture {
+                        withAnimation(.interactiveSpring()) {
+                            isOpen.toggle()
+                        }
                     }
-                    self.isOpen = value.translation.height < 0
+                
+                Color.clear
+                    .overlay(
+                        content()
+                    )
+                
+                Spacer(minLength: 0)
+            }
+            .padding(.top, openOffset)
+            .background(
+                ZStack(alignment: .bottom) {
+                    Color.black
+                        .cornerRadius(Constants.radius)
+                    
+                    Color.black
+                        .edgesIgnoringSafeArea(.all)
+                        .frame(height: Constants.radius)
                 }
             )
+            .offset(y: min(max(0, (isOpen ? 0 : proxy.size.height - openOffset - closedOffset) + dragOffset), proxy.size.height))
+            .gesture(
+                DragGesture()
+                    .updating($isDragging) { value, state, transaction in
+                        state = true
+                    }
+                    .onChanged { value in
+                        dragOffset = value.translation.height
+                    }
+            )
+            .onChange(of: isDragging) { value in
+                if !isDragging {
+                    withAnimation(.interactiveSpring()) {
+                        let snapDistance = (proxy.size.height - openOffset - closedOffset) * Constants.snapRatio
+                        if abs(dragOffset) > snapDistance {
+                            isOpen.toggle()
+                        }
+                        dragOffset = 0
+                    }
+                }
+            }
         }
     }
 }
 
 struct BottomSheetView_Previews: PreviewProvider {
+    struct PreviewData: View {
+        @State private var isOpen = true
+        
+        var body: some View {
+            GeometryReader { proxy in
+                BottomSheetView(isOpen: $isOpen, closedOffset: 200, openOffset: 0) {
+                    Color.red.padding()
+                }
+            }
+        }
+    }
+    
     static var previews: some View {
-        BottomSheetView(isOpen: .constant(false), maxHeight: 600) {
-            Rectangle().fill(Color.red)
-        }.edgesIgnoringSafeArea(.all)
+        PreviewData()
     }
 }

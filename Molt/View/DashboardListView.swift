@@ -9,13 +9,16 @@ import SwiftUI
 
 struct DashboardListView: View {
     let sessions: [MoltSession]
+    
     var body: some View {
-        List{
-            ForEach(sessions,id: \.id){ session in
-                StickyViewWithData(session: .constant(session), curveFactor: 0)
+        ScrollView {
+            LazyVStack {
+                ForEach(sessions,id: \.id){ session in
+                    StickyViewWithData(session: .constant(session), curveFactor: 0)
+                        .padding()
+                }
             }
         }
-        .listStyle(.sidebar)
     }
 }
 
