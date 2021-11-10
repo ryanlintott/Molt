@@ -8,24 +8,32 @@
 import SwiftUI
 
 struct JournalEntryView: View {
-    @State private var journalText = "Note your Thoughts"
     @Binding var currentSession: MoltSession
     
-    let completion: () -> Void
+    let completion: (Bool) -> Void
     
     var body: some View {
         VStack {
-            StickyViewWithData(session: $currentSession, curveFactor: 0)
-                .padding()
+            StickyViewWithData(session: $currentSession, curveFactor: 0, isEditable: true)
+                .padding(.horizontal)
             
             ColorPickerView(chosenColor: $currentSession.noteColor)
                 .frame(height: 50)
-                .padding()
+                .padding(5)
             
             Button("Submit") {
-                completion()
+                completion(true)
             }
             .buttonStyle(DashedButtonStyle())
+            
+            Button {
+                completion(false)
+            } label: {
+                Text("Cancel")
+                    .font(.system(size: 20, weight: .bold, design: .rounded))
+                    .foregroundColor(.black)
+            }
+            .padding()
         
             Spacer()
         }
@@ -38,7 +46,7 @@ struct JournalEntryView_Previews: PreviewProvider {
         @State var currentSession: MoltSession = .example
 
         var body: some View {
-            JournalEntryView( currentSession: $currentSession) {
+            JournalEntryView( currentSession: $currentSession) { _ in 
                 // Please Run
             }
         }

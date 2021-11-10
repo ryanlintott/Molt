@@ -18,6 +18,8 @@ struct SessionView: View {
     @State private var image = Image(images.randomElement() ?? "bg1")
     @State private var session = MoltSession(id: UUID(), dateStarted: Date(), stressLevel: 10, goalLength: 120, length: 0, noteColor: .stickyYellow, journal: "")
     
+    let completion: (MoltSession) -> ()
+    
     var material: Material {
         switch sessionState {
         case .setup:
@@ -39,9 +41,7 @@ struct SessionView: View {
                 Color.clear
                     .background(
                         ZStack {
-                            image
-                                .resizable()
-                                .scaledToFill()
+                            ParallaxImage(image)
                                 .edgesIgnoringSafeArea(.all)
                             
                             if sessionState != .relax {
@@ -55,9 +55,9 @@ struct SessionView: View {
                 
                 switch sessionState {
                 case .setup:
-                    SessionParameterView(goalLength: $session.goalLength, stressLevel: $session.stressLevel) {
+                    SessionParameterView(goalLength: $session.goalLength, stressLevel: $session.stressLevel) { isSessionStarted in
                         withAnimation {
-                            sessionState = .stress
+                            sessionState = isSessionStarted ? .stress : .complete
                         }
                     }
                 case .stress:
@@ -74,8 +74,11 @@ struct SessionView: View {
                         }
                     }
                 case .journal:
-                    JournalEntryView(currentSession: $session) {
+                    JournalEntryView(currentSession: $session) { isSessionLogged in
                         // save session
+                        if isSessionLogged {
+                            completion(session)
+                        }
                         withAnimation {
                             sessionState = .complete
                         }
@@ -94,7 +97,9 @@ struct SessionView_Previews: PreviewProvider {
         @State private var sessionState = SessionState.setup
         
         var body: some View {
-            SessionView(sessionState: $sessionState)
+            SessionView(sessionState: $sessionState) { _ in 
+                // do something
+            }
         }
     }
     

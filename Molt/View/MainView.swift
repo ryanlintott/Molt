@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
+    @Environment(\.managedObjectContext) private var moc
+    
     @State private var isShowingSession = false
     @State private var sessionState: SessionState = .complete
     
@@ -19,7 +21,12 @@ struct MainView: View {
                         sessionState = .setup
                     }
                 } else {
-                    SessionView(sessionState: $sessionState)
+                    SessionView(sessionState: $sessionState) { session in
+                        moc.performAndSave { context in
+                            let moltSessionData = MoltSessionData(context: context)
+                            moltSessionData.setValues(from: session)
+                        }
+                    }
                 }
             }
         }
@@ -29,5 +36,6 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environment(\.managedObjectContext, PersistenceCloudController.preview.moc)
     }
 }

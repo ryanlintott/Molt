@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "140587893-5170156a-9846-4229-96e7-fe0bc14890bd.png",
+      "filename" : "moltLogo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "moltLogo@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "moltLogo@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

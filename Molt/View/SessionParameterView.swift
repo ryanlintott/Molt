@@ -11,7 +11,7 @@ struct SessionParameterView: View {
     @Binding var goalLength: Int
     @Binding var stressLevel: Int
     
-    let startSession: () -> Void
+    let completion: (Bool) -> Void
     
     let minTime = 60
     let maxTime = 600
@@ -20,6 +20,11 @@ struct SessionParameterView: View {
     
     var body: some View {
         VStack {
+            Text("New Session")
+                .font(.system(size: 60, weight: .black, design: .rounded))
+            
+            Spacer()
+            
             HStack(spacing:20) {
                 Button {
                     if goalLength > minTime {
@@ -51,17 +56,29 @@ struct SessionParameterView: View {
             
             Text("**Calm Time**")
                 .font(.system(size: 30, weight: .black, design: .rounded))
+                .padding(.bottom)
             
             StickyStackSlider(stressLevel: $stressLevel, minStress: minStress, maxStress: maxStress)
-                .padding()
+                .padding(.horizontal)
             
             Text("**Stress Level**")
                 .font(.system(size: 30, weight: .black, design: .rounded))
+            
             Button("Start") {
-                startSession()
+                completion(true)
             }
             .buttonStyle(DashedButtonStyle())
             .padding()
+            
+            Button {
+                completion(false)
+            } label: {
+                Text("Cancel")
+                    .font(.system(size: 20, weight: .bold, design: .rounded))
+                    .foregroundColor(.black)
+            }
+            
+            Spacer()
         }
     }
 }
@@ -72,8 +89,8 @@ struct SessionParameterView_Previews: PreviewProvider {
         @State private var stressLevel = 10
         
         var body: some View {
-            SessionParameterView(goalLength: $goalLength, stressLevel: $stressLevel) {
-                print("start session")
+            SessionParameterView(goalLength: $goalLength, stressLevel: $stressLevel) { _ in
+                // do something
             }
         }
     }

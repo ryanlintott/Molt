@@ -25,6 +25,20 @@ struct StickyViewWithData: View {
         session.journal == ""
     }
     
+    func timeString(_ seconds: Int) -> String {
+        String(format: "%01d:%02d", seconds / 60, seconds % 60)
+    }
+    
+    var calmTime: Text {
+        let goalLength = timeString(session.goalLength)
+        if session.length == session.goalLength {
+            return Text("\(Image(systemName: "checkmark.seal.fill")) \(goalLength)")
+        } else {
+            let length = timeString(session.length)
+            return Text(length + " / " + goalLength)
+        }
+    }
+    
     var body: some View {
         VStack {
             Text(dateStringGenerator(date:session.dateStarted))
@@ -62,16 +76,7 @@ struct StickyViewWithData: View {
                 
                 Spacer()
                 
-                if session.completed {
-                    HStack{
-                        Image(systemName: "checkmark.seal.fill")
-                            .foregroundColor(.white)
-                        Text(session.goalLength.description)
-                        
-                    }
-                } else {
-                    Text("\(session.length.description) / \(session.goalLength.description)")
-                }
+                calmTime
             }
         }
         .padding()

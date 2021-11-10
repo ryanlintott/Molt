@@ -7,19 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		911B09562738270700C78C75 /* StickyStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B09552738270700C78C75 /* StickyStack.swift */; };
 		911B095A27382FDF00C78C75 /* SessionTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B095927382FDF00C78C75 /* SessionTimerView.swift */; };
 		911B095C2738458400C78C75 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B095B2738458400C78C75 /* BottomSheetView.swift */; };
 		911B095E2738502100C78C75 /* JournalEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B095D2738502100C78C75 /* JournalEntryView.swift */; };
 		911B0960273853F700C78C75 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911B095F273853F700C78C75 /* ColorPickerView.swift */; };
 		91CBF0C62735857700C4E8BC /* StartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0C52735857700C4E8BC /* StartPage.swift */; };
-		91CBF0CD2735999500C4E8BC /* SessionParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0CC2735999500C4E8BC /* SessionParameterView.swift */; };
 		91CBF0D02735B3FC00C4E8BC /* ParallaxEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0CF2735B3FC00C4E8BC /* ParallaxEffect.swift */; };
 		91CBF0D22735B44D00C4E8BC /* ParallaxDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0D12735B44D00C4E8BC /* ParallaxDemo.swift */; };
 		91CBF0D42736564B00C4E8BC /* DashedBorderEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CBF0D32736564B00C4E8BC /* DashedBorderEffect.swift */; };
 		CF0814B82736B09B00D7E562 /* StrokeStyle+dashed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0814B72736B09B00D7E562 /* StrokeStyle+dashed.swift */; };
 		CF0814BA2736B11B00D7E562 /* DashedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0814B92736B11B00D7E562 /* DashedButtonStyle.swift */; };
 		CF0814BC2736B6D500D7E562 /* StickyWall.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0814BB2736B6D500D7E562 /* StickyWall.swift */; };
+		CF36017F273C2E06006B6BA7 /* SessionParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF36017E273C2E06006B6BA7 /* SessionParameterView.swift */; };
+		CF360181273C2E2C006B6BA7 /* StickyStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF360180273C2E2C006B6BA7 /* StickyStack.swift */; };
+		CF360183273C2E42006B6BA7 /* WallSticky.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF360182273C2E42006B6BA7 /* WallSticky.swift */; };
+		CF360186273C2FA3006B6BA7 /* PersistenceCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF360185273C2FA3006B6BA7 /* PersistenceCloud.swift */; };
+		CF360188273C2FC3006B6BA7 /* NSManagedObjectContext-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF360187273C2FC2006B6BA7 /* NSManagedObjectContext-extension.swift */; };
+		CF36018A273C3142006B6BA7 /* PersistenceMolt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF360189273C3142006B6BA7 /* PersistenceMolt.swift */; };
+		CF36018E273C5370006B6BA7 /* ParallaxImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF36018D273C5370006B6BA7 /* ParallaxImage.swift */; };
 		CF8B11AC2735826B00579F46 /* MoltApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11AB2735826B00579F46 /* MoltApp.swift */; };
 		CF8B11AE2735826B00579F46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11AD2735826B00579F46 /* ContentView.swift */; };
 		CF8B11B02735826D00579F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8B11AF2735826D00579F46 /* Assets.xcassets */; };
@@ -33,13 +38,11 @@
 		CF8B11DC2735A2D000579F46 /* StickyViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11DB2735A2D000579F46 /* StickyViewDemo.swift */; };
 		CF8B11DF2735F21F00579F46 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8B11DE2735F21F00579F46 /* Colors.xcassets */; };
 		CF8B11E12735F2B200579F46 /* Color+sticky.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11E02735F2B200579F46 /* Color+sticky.swift */; };
-		CFA1CA072736FF970025EAEF /* WallSticky.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1CA062736FF970025EAEF /* WallSticky.swift */; };
 		CFA1CA0927371E790025EAEF /* InteractiveStickyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA1CA0827371E790025EAEF /* InteractiveStickyView.swift */; };
-		CFA9CACC273816B40006C424 /* StickyStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CACB273816B40006C424 /* StickyStack.swift */; };
+		CFA9CACC273816B40006C424 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		CFA9CACE273816ED0006C424 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CACD273816ED0006C424 /* Diamond.swift */; };
 		CFA9CAD227382A390006C424 /* MoltData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CAD027382A390006C424 /* MoltData.xcdatamodeld */; };
 		CFA9CAD427382AD10006C424 /* MoltSessionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CAD327382AD10006C424 /* MoltSessionData.swift */; };
-		CFA9CB1327382EC40006C424 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CB1227382EC40006C424 /* Persistence.swift */; };
 		CFA9CB1527382EF60006C424 /* MoltSession+example.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CB1427382EF60006C424 /* MoltSession+example.swift */; };
 		CFA9CB1E273844C60006C424 /* GlassViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CB1C273844C60006C424 /* GlassViewModifier.swift */; };
 		CFA9CB1F273844C60006C424 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA9CB1D273844C60006C424 /* HapticManager.swift */; };
@@ -70,19 +73,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		911B09552738270700C78C75 /* StickyStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyStack.swift; sourceTree = "<group>"; };
 		911B095927382FDF00C78C75 /* SessionTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTimerView.swift; sourceTree = "<group>"; };
 		911B095B2738458400C78C75 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		911B095D2738502100C78C75 /* JournalEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntryView.swift; sourceTree = "<group>"; };
 		911B095F273853F700C78C75 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		91CBF0C52735857700C4E8BC /* StartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage.swift; sourceTree = "<group>"; };
-		91CBF0CC2735999500C4E8BC /* SessionParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionParameterView.swift; sourceTree = "<group>"; };
 		91CBF0CF2735B3FC00C4E8BC /* ParallaxEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxEffect.swift; sourceTree = "<group>"; };
 		91CBF0D12735B44D00C4E8BC /* ParallaxDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxDemo.swift; sourceTree = "<group>"; };
 		91CBF0D32736564B00C4E8BC /* DashedBorderEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedBorderEffect.swift; sourceTree = "<group>"; };
 		CF0814B72736B09B00D7E562 /* StrokeStyle+dashed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StrokeStyle+dashed.swift"; sourceTree = "<group>"; };
 		CF0814B92736B11B00D7E562 /* DashedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedButtonStyle.swift; sourceTree = "<group>"; };
 		CF0814BB2736B6D500D7E562 /* StickyWall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyWall.swift; sourceTree = "<group>"; };
+		CF36017E273C2E06006B6BA7 /* SessionParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionParameterView.swift; sourceTree = "<group>"; };
+		CF360180273C2E2C006B6BA7 /* StickyStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickyStack.swift; sourceTree = "<group>"; };
+		CF360182273C2E42006B6BA7 /* WallSticky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallSticky.swift; sourceTree = "<group>"; };
+		CF360185273C2FA3006B6BA7 /* PersistenceCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceCloud.swift; sourceTree = "<group>"; };
+		CF360187273C2FC2006B6BA7 /* NSManagedObjectContext-extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext-extension.swift"; sourceTree = "<group>"; };
+		CF360189273C3142006B6BA7 /* PersistenceMolt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceMolt.swift; sourceTree = "<group>"; };
+		CF36018D273C5370006B6BA7 /* ParallaxImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxImage.swift; sourceTree = "<group>"; };
 		CF8B11A82735826B00579F46 /* Molt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Molt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8B11AB2735826B00579F46 /* MoltApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoltApp.swift; sourceTree = "<group>"; };
 		CF8B11AD2735826B00579F46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,13 +107,10 @@
 		CF8B11DB2735A2D000579F46 /* StickyViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyViewDemo.swift; sourceTree = "<group>"; };
 		CF8B11DE2735F21F00579F46 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CF8B11E02735F2B200579F46 /* Color+sticky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+sticky.swift"; sourceTree = "<group>"; };
-		CFA1CA062736FF970025EAEF /* WallSticky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallSticky.swift; sourceTree = "<group>"; };
 		CFA1CA0827371E790025EAEF /* InteractiveStickyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveStickyView.swift; sourceTree = "<group>"; };
-		CFA9CACB273816B40006C424 /* StickyStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyStack.swift; sourceTree = "<group>"; };
 		CFA9CACD273816ED0006C424 /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
 		CFA9CAD127382A390006C424 /* MoltData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoltData.xcdatamodel; sourceTree = "<group>"; };
 		CFA9CAD327382AD10006C424 /* MoltSessionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoltSessionData.swift; sourceTree = "<group>"; };
-		CFA9CB1227382EC40006C424 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		CFA9CB1427382EF60006C424 /* MoltSession+example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoltSession+example.swift"; sourceTree = "<group>"; };
 		CFA9CB1C273844C60006C424 /* GlassViewModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlassViewModifier.swift; sourceTree = "<group>"; };
 		CFA9CB1D273844C60006C424 /* HapticManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
@@ -150,9 +155,9 @@
 				91CBF0CE2735A66D00C4E8BC /* Animation */,
 				CFA9CB2027385AF30006C424 /* MainView.swift */,
 				91CBF0C52735857700C4E8BC /* StartPage.swift */,
-				CFBB63A92739C1A300C7F0B9 /* SessionListView.swift */,
 				CFA9CB2227385B990006C424 /* SessionView.swift */,
-				91CBF0CC2735999500C4E8BC /* SessionParameterView.swift */,
+				CFBB63A92739C1A300C7F0B9 /* SessionListView.swift */,
+				CF36017E273C2E06006B6BA7 /* SessionParameterView.swift */,
 				CF0814BB2736B6D500D7E562 /* StickyWall.swift */,
 				911B095927382FDF00C78C75 /* SessionTimerView.swift */,
 				CFA9CB1C273844C60006C424 /* GlassViewModifier.swift */,
@@ -168,11 +173,21 @@
 			isa = PBXGroup;
 			children = (
 				91CBF0CF2735B3FC00C4E8BC /* ParallaxEffect.swift */,
+				CF36018D273C5370006B6BA7 /* ParallaxImage.swift */,
 				91CBF0D12735B44D00C4E8BC /* ParallaxDemo.swift */,
 				91CBF0D32736564B00C4E8BC /* DashedBorderEffect.swift */,
 				911B095B2738458400C78C75 /* BottomSheetView.swift */,
 			);
 			path = Animation;
+			sourceTree = "<group>";
+		};
+		CF360184273C2F97006B6BA7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CF360185273C2FA3006B6BA7 /* PersistenceCloud.swift */,
+				CF360187273C2FC2006B6BA7 /* NSManagedObjectContext-extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CF8B119F2735826B00579F46 = {
@@ -203,6 +218,7 @@
 				CF8B11E22735F32F00579F46 /* Styles */,
 				91CBF0C32735850D00C4E8BC /* View */,
 				CF8B11AB2735826B00579F46 /* MoltApp.swift */,
+				CF360184273C2F97006B6BA7 /* Extensions */,
 				CF8B11AD2735826B00579F46 /* ContentView.swift */,
 				CF8B11AF2735826D00579F46 /* Assets.xcassets */,
 				CF8B11DE2735F21F00579F46 /* Colors.xcassets */,
@@ -239,16 +255,15 @@
 		CF8B11DD2735A43E00579F46 /* Sticky */ = {
 			isa = PBXGroup;
 			children = (
-				CFA9CACB273816B40006C424 /* StickyStack.swift */,
+				CF360180273C2E2C006B6BA7 /* StickyStack.swift */,
 				CFA9CB242738696B0006C424 /* StickyStackSlider.swift */,
 				CFA9CACD273816ED0006C424 /* Diamond.swift */,
-				CFA1CA062736FF970025EAEF /* WallSticky.swift */,
 				CF8B11D72735889000579F46 /* Sticky.swift */,
 				CF8B11D92735A2C200579F46 /* StickyView.swift */,
 				CFA1CA0827371E790025EAEF /* InteractiveStickyView.swift */,
 				CF8B11DB2735A2D000579F46 /* StickyViewDemo.swift */,
 				D59178932737D96200F9C11A /* StickyViewWithData.swift */,
-				911B09552738270700C78C75 /* StickyStack.swift */,
+				CF360182273C2E42006B6BA7 /* WallSticky.swift */,
 			);
 			path = Sticky;
 			sourceTree = "<group>";
@@ -269,7 +284,6 @@
 			children = (
 				CF8B11D52735855400579F46 /* MoltSession.swift */,
 				CFA9CB1427382EF60006C424 /* MoltSession+example.swift */,
-				CFA9CB1227382EC40006C424 /* Persistence.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,6 +293,7 @@
 			children = (
 				CFA9CAD027382A390006C424 /* MoltData.xcdatamodeld */,
 				CFA9CAD327382AD10006C424 /* MoltSessionData.swift */,
+				CF360189273C3142006B6BA7 /* PersistenceMolt.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -420,37 +435,38 @@
 				CFA9CB1F273844C60006C424 /* HapticManager.swift in Sources */,
 				CFA9CACE273816ED0006C424 /* Diamond.swift in Sources */,
 				CF8B11DA2735A2C200579F46 /* StickyView.swift in Sources */,
+				CF36018E273C5370006B6BA7 /* ParallaxImage.swift in Sources */,
 				CF0814BC2736B6D500D7E562 /* StickyWall.swift in Sources */,
-				CFA1CA072736FF970025EAEF /* WallSticky.swift in Sources */,
 				D59178922737CCD200F9C11A /* RandomImageGenerator.swift in Sources */,
 				911B095C2738458400C78C75 /* BottomSheetView.swift in Sources */,
-				91CBF0CD2735999500C4E8BC /* SessionParameterView.swift in Sources */,
 				CFA9CAD227382A390006C424 /* MoltData.xcdatamodeld in Sources */,
 				CFA9CB2127385AF30006C424 /* MainView.swift in Sources */,
-				CFA1CA072736FF970025EAEF /* WallSticky.swift in Sources */,
-				91CBF0CD2735999500C4E8BC /* SessionParameterView.swift in Sources */,
 				91CBF0C62735857700C4E8BC /* StartPage.swift in Sources */,
 				CFA9CB1527382EF60006C424 /* MoltSession+example.swift in Sources */,
 				91CBF0D02735B3FC00C4E8BC /* ParallaxEffect.swift in Sources */,
-				CFA9CB1327382EC40006C424 /* Persistence.swift in Sources */,
 				CF0814B82736B09B00D7E562 /* StrokeStyle+dashed.swift in Sources */,
+				CF360188273C2FC3006B6BA7 /* NSManagedObjectContext-extension.swift in Sources */,
 				CF8B11E12735F2B200579F46 /* Color+sticky.swift in Sources */,
 				CF0814BA2736B11B00D7E562 /* DashedButtonStyle.swift in Sources */,
 				CFA9CB2327385B990006C424 /* SessionView.swift in Sources */,
-				CFA9CACC273816B40006C424 /* StickyStack.swift in Sources */,
+				CFA9CACC273816B40006C424 /* (null) in Sources */,
 				CF8B11AC2735826B00579F46 /* MoltApp.swift in Sources */,
-				911B09562738270700C78C75 /* StickyStack.swift in Sources */,
 				CFA1CA0927371E790025EAEF /* InteractiveStickyView.swift in Sources */,
 				D59178942737D96200F9C11A /* StickyViewWithData.swift in Sources */,
+				CF360186273C2FA3006B6BA7 /* PersistenceCloud.swift in Sources */,
+				CF36017F273C2E06006B6BA7 /* SessionParameterView.swift in Sources */,
 				CF8B11D82735889000579F46 /* Sticky.swift in Sources */,
 				911B095E2738502100C78C75 /* JournalEntryView.swift in Sources */,
 				CF8B11DC2735A2D000579F46 /* StickyViewDemo.swift in Sources */,
 				D5B565DE2735C5EF0044F6BF /* DashboardListView.swift in Sources */,
 				CFA9CB252738696B0006C424 /* StickyStackSlider.swift in Sources */,
+				CF360181273C2E2C006B6BA7 /* StickyStack.swift in Sources */,
 				CFA9CB1E273844C60006C424 /* GlassViewModifier.swift in Sources */,
 				91CBF0D22735B44D00C4E8BC /* ParallaxDemo.swift in Sources */,
 				911B0960273853F700C78C75 /* ColorPickerView.swift in Sources */,
+				CF360183273C2E42006B6BA7 /* WallSticky.swift in Sources */,
 				91CBF0D42736564B00C4E8BC /* DashedBorderEffect.swift in Sources */,
+				CF36018A273C3142006B6BA7 /* PersistenceMolt.swift in Sources */,
 				CFA9CAD427382AD10006C424 /* MoltSessionData.swift in Sources */,
 				CF8B11D62735855400579F46 /* MoltSession.swift in Sources */,
 			);
@@ -674,7 +690,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 97423JQ8B9;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -699,7 +715,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 97423JQ8B9;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

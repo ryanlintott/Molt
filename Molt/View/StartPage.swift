@@ -16,10 +16,10 @@ struct StartPage: View {
     
     var body: some View {
         VStack {
-            Image("banner")
+            Image("moltLogo")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .padding(10)
+                .padding()
             
             //change destination when DashboardView is completed
             Button("Begin",action: {
@@ -34,8 +34,7 @@ struct StartPage: View {
                 ZStack {
                     Color.black
                     
-                    DashboardListView(sessions: examples)
-//                    SessionListView()
+                    SessionListView()
                 }
             }
         )
@@ -47,6 +46,6 @@ struct StartPage_Previews: PreviewProvider {
         StartPage(maxHeight: 100) {
             // start session
         }
-        .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        .environment(\.managedObjectContext, PersistenceCloudController.preview.container.viewContext)
     }
 }

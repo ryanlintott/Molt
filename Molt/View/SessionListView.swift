@@ -24,16 +24,6 @@ struct SessionListView: View {
                 .bold()
             
             DashboardListView(sessions: sessions)
-//            ScrollView {
-//                LazyVStack {
-//                    ForEach(sessionsData, id: \.id) { sessionData in
-//                        if let session = sessionData.session {
-//                            StickyViewWithData(session: .constant(session), curveFactor: 0)
-//                                .padding()
-//                        }
-//                    }
-//                }
-//            }
         }
     }
 }
@@ -41,6 +31,6 @@ struct SessionListView: View {
 struct SessionListView_Previews: PreviewProvider {
     static var previews: some View {
         SessionListView()
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            .environment(\.managedObjectContext, PersistenceCloudController.preview.moc)
     }
 }

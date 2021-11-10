@@ -13,14 +13,14 @@ struct DashedButtonStyle: ButtonStyle {
     
     init(lineWidth: CGFloat? = nil, cornerRadius: CGFloat? = nil) {
         self.lineWidth = lineWidth
-        self.cornerRadius = cornerRadius ?? 40
+        self.cornerRadius = cornerRadius ?? 30
     }
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(.system(size: 40, weight: .black, design: .rounded))
             .foregroundColor(.black)
-            .padding(40)
+            .padding(cornerRadius)
             .background(
                 RoundedRectangle(cornerRadius: cornerRadius)
                     .strokeBorder(style: .moltDashed(lineWidth: lineWidth, phase: configuration.isPressed ? 50 : 0))
