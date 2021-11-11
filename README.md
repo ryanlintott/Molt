@@ -17,6 +17,8 @@
 ![Badge](https://img.shields.io/badge/Xcode-13.1-green)
 ![badge](https://img.shields.io/badge/Swift-5-red)
 
+### Download via [TestFlight](https://testflight.apple.com/join/J14wYrAj "Testflight")
+
 ## What is Molt?
 Molt is a meditation/relaxation app that helps you get into the right headspace by shedding your stressful thoughts.
 
