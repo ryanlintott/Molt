@@ -25,6 +25,7 @@
 		CF360188273C2FC3006B6BA7 /* NSManagedObjectContext-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF360187273C2FC2006B6BA7 /* NSManagedObjectContext-extension.swift */; };
 		CF36018A273C3142006B6BA7 /* PersistenceMolt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF360189273C3142006B6BA7 /* PersistenceMolt.swift */; };
 		CF36018E273C5370006B6BA7 /* ParallaxImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF36018D273C5370006B6BA7 /* ParallaxImage.swift */; };
+		CF59769F2742EF0100119099 /* Marketing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59769E2742EF0100119099 /* Marketing.swift */; };
 		CF8B11AC2735826B00579F46 /* MoltApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11AB2735826B00579F46 /* MoltApp.swift */; };
 		CF8B11AE2735826B00579F46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8B11AD2735826B00579F46 /* ContentView.swift */; };
 		CF8B11B02735826D00579F46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF8B11AF2735826D00579F46 /* Assets.xcassets */; };
@@ -91,6 +92,7 @@
 		CF360187273C2FC2006B6BA7 /* NSManagedObjectContext-extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext-extension.swift"; sourceTree = "<group>"; };
 		CF360189273C3142006B6BA7 /* PersistenceMolt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceMolt.swift; sourceTree = "<group>"; };
 		CF36018D273C5370006B6BA7 /* ParallaxImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxImage.swift; sourceTree = "<group>"; };
+		CF59769E2742EF0100119099 /* Marketing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Marketing.swift; sourceTree = "<group>"; };
 		CF8B11A82735826B00579F46 /* Molt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Molt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8B11AB2735826B00579F46 /* MoltApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoltApp.swift; sourceTree = "<group>"; };
 		CF8B11AD2735826B00579F46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 			children = (
 				CF8B11D52735855400579F46 /* MoltSession.swift */,
 				CFA9CB1427382EF60006C424 /* MoltSession+example.swift */,
+				CF59769E2742EF0100119099 /* Marketing.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				CF36018A273C3142006B6BA7 /* PersistenceMolt.swift in Sources */,
 				CFA9CAD427382AD10006C424 /* MoltSessionData.swift in Sources */,
 				CF8B11D62735855400579F46 /* MoltSession.swift in Sources */,
+				CF59769F2742EF0100119099 /* Marketing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
